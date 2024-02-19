@@ -3,6 +3,7 @@
     <img :src="item.src" :class="'p-main-banner__img'" alt="">
     <div class="p-main-banner__container">
       <p-main-banner-welcome v-if="item.type === 'welcome'"/>
+      <p-main-banner-services v-if="item.type === 'services'"/>
     </div>
   </div>
 </template>

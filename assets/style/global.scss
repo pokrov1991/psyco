@@ -1,4 +1,5 @@
 @import "normalize";
+@import "slider";
 *,
 *::before,
 *::after {
@@ -90,5 +91,6 @@ $offset: 1;
     top: 0;
     content: '';
     background: rgba(255,255,255, 0.5);
+    z-index: 2;
   }
 }
