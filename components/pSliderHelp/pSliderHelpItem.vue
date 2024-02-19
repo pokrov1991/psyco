@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="item.link" class="p-slider-help-item">
+  <div @click="openModal" class="p-slider-help-item">
     <div class="p-slider-help-item__container">
       <div class="p-slider-help-item__row">
         <div class="p-slider-help-item__row-img">
@@ -9,15 +9,17 @@
           <div class="p-slider-help-item__row-title"> {{item.title}}</div>
           <div class="p-slider-help-item__row-description"> {{item.description}}</div>
           <div class="p-slider-help-item__row-action">
-            <div class="p-slider-help-item__row-action-more"></div>
+            <div class="p-slider-help-item__row-action-more">Подробнее</div>
             <div class="p-slider-help-item__row-action-button"></div>
           </div>
         </div>
       </div>
     </div>
-  </nuxt-link>
+  </div>
+  <p-modal-help :item="item" @close="closeModal" v-if="isOpen"/>
 </template>
 <script setup lang="ts">
+import { ref } from "vue";
 interface Props {
   item: {
     img: string,
@@ -34,6 +36,13 @@ const props = withDefaults( defineProps<Props>(), {
     description: 'Оказание экстренной психологической помощи в сложной спортивной'
   }
 });
+const isOpen = ref(false);
+const openModal = () => {
+  isOpen.value = true;
+}
+const closeModal = () => {
+  isOpen.value = false;
+}
 </script>
 
 

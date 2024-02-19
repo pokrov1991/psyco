@@ -1,0 +1,31 @@
+.p-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    height: 100%;
+    max-height: 500px;
+    background: #f0f0f0;
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgb(204,23,30);
+    cursor: pointer;
+  }
+}

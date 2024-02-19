@@ -3,7 +3,7 @@
   <div class="p-slider-help__container">
     <div class="p-slider-help__wrapper">
       <div class="p-slider-help__title">
-        <h3>Последние статьи и новости</h3>
+        <h3>Помощь</h3> <span>/ в решении вопросов</span>
       </div>
       <Swiper
           :class="'p-slider-help__slider'"
