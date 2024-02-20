@@ -67,12 +67,24 @@
         color: rgb(208,41,50);
       }
       &-button {
-        position: absolute;
+        position: relative;
         right: -16px;
         top: 0;
         width: 40px;
         height: 40px;
         background: rgb(208,41,50);
+        cursor: pointer;
+
+        &::before {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 16px;
+          height: 16px;
+          transform: translate(-50%, -50%) rotate(180deg);
+          background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS43MDcgMi4yNTFhMS4xMjEgMS4xMjEgMCAwMC0xLjQxNCAwbC02IDUuMTQzQS44LjggMCAwMDQgOGEuOC44IDAgMDAuMjkzLjYwNmw2IDUuMTQzYy4zOS4zMzUgMS4wMjQuMzM1IDEuNDE0IDAgLjM5LS4zMzUuMzktLjg3OCAwLTEuMjEyTDYuNDE0IDhsNS4yOTMtNC41MzdjLjM5LS4zMzUuMzktLjg3NyAwLTEuMjEyeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==) no-repeat 50%/contain;
+          content: '';
+        }
       }
     }
   }

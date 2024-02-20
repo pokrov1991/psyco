@@ -21,6 +21,12 @@
 </div>
 </template>
 <script setup lang="ts">
+import {getHelpItems} from "~/api";
+
+
+const data = await useFetch(getHelpItems())
+console.log(data)
+
 import {ref} from 'vue';
 const items = ref([
     {
