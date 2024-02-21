@@ -1,6 +1,5 @@
 <template>
 <PModal @close="closeModal">
-  <template #title> Some title </template>
   <template #body>
     <div class="p-modal-help__container">
       <div class="p-modal-help__img">
@@ -43,5 +42,5 @@ const props = withDefaults( defineProps<Props>(), {
 </script>
 
 <style scoped>
-
+@import "pModalHelp.scss";
 </style>

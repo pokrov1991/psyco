@@ -1,0 +1,16 @@
+.p-modal-help {
+  &__img {
+    position: relative;
+    height: 500px;
+    z-index: 1;
+    img {
+      position: absolute;
+      left: -24px;
+      top: -24px;
+      width: calc(100% + 48px);
+      height: calc(100% + 24px);
+      object-fit: cover;
+    }
+  }
+  height: 100%;
+}

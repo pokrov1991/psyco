@@ -5,5 +5,5 @@ export default defineNuxtConfig({
   axios: {
     baseUrl: '/'
   },
-  css: ['~/assets/style/global.scss']
+  css: ['~/assets/style/global.scss'],
 })

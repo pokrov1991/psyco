@@ -89,3 +89,16 @@
     }
   }
 }
+.smooth-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.smooth-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.smooth-enter-from,
+.smooth-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
