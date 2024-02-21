@@ -1,7 +1,23 @@
 .p-modal-help {
+  &__container {
+    max-width: 650px;
+  }
+  &-content {
+    padding: 30px 0 0;
+    &__title {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+    &__description {
+      color: #868686;
+    }
+  }
+
   &__img {
     position: relative;
-    height: 500px;
+    height: 470px;
     z-index: 1;
     img {
       position: absolute;

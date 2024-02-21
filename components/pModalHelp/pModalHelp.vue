@@ -1,5 +1,5 @@
 <template>
-<PModal @close="closeModal">
+<PModal :class="'help'" @close="closeModal">
   <template #body>
     <div class="p-modal-help__container">
       <div class="p-modal-help__img">
@@ -7,7 +7,7 @@
       </div>
       <div class="p-modal-help-content">
         <div class="p-modal-help-content__title">{{item.title}}</div>
-        <div class="p-modal-help-content__description">{{item.description}}</div>
+        <div class="p-modal-help-content__description" v-html="item.description"></div>
       </div>
     </div>
     <div @click="openModalForm" class="p-modal-action"> Записаться</div>
@@ -41,6 +41,6 @@ const props = withDefaults( defineProps<Props>(), {
 });
 </script>
 
-<style scoped>
+<style >
 @import "pModalHelp.scss";
 </style>

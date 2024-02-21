@@ -6,6 +6,8 @@
   bottom: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 32px 0;
+  overflow: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +44,17 @@
       background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4LjcwNyA2LjcwN2ExIDEgMCAwMC0xLjQxNC0xLjQxNEwxMiAxMC41ODYgNi43MDcgNS4yOTNhMSAxIDAgMDAtMS40MTQgMS40MTRMMTAuNTg2IDEybC01LjI5MyA1LjI5M2ExIDEgMCAxMDEuNDE0IDEuNDE0TDEyIDEzLjQxNGw1LjI5MyA1LjI5M2ExIDEgMCAwMDEuNDE0LTEuNDE0TDEzLjQxNCAxMmw1LjI5My01LjI5M3oiIGZpbGw9IiM5OTlEQzIiLz48L3N2Zz4=) no-repeat 50%/contain;
       filter: invert(93%) sepia(94%) saturate(0) hue-rotate(248deg) brightness(199%) contrast(106%);
     }
+  }
+  &-action {
+    margin-top: 32px;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    background: rgb(204,23,30);
+    color: #fff;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 600;
   }
   img {
     width: 100%;

@@ -7,7 +7,7 @@
         </div>
         <div class="p-slider-help-item__row-content">
           <div class="p-slider-help-item__row-title"> {{item.title}}</div>
-          <div class="p-slider-help-item__row-description"> {{item.description}}</div>
+          <div class="p-slider-help-item__row-description" v-html="item.description"></div>
           <div class="p-slider-help-item__row-action">
             <div class="p-slider-help-item__row-action-more">Подробнее</div>
             <div class="p-slider-help-item__row-action-button"></div>
