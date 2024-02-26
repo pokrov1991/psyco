@@ -1,5 +1,5 @@
 <template>
-  <div @click="openModal" class="p-slider-help-item">
+  <div @click="openModal(item)" class="p-slider-help-item">
     <div class="p-slider-help-item__container">
       <div class="p-slider-help-item__row">
         <div class="p-slider-help-item__row-img">
@@ -28,6 +28,7 @@ interface Props {
     link: string
   }
 }
+const emit = defineEmits(["open-modal"]);
 const props = withDefaults( defineProps<Props>(), {
   item: {
     img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
@@ -37,7 +38,8 @@ const props = withDefaults( defineProps<Props>(), {
   }
 });
 const isOpen = ref(false);
-const openModal = () => {
+const openModal = (item) => {
+  emit('open-modal', item)
   isOpen.value = true;
 }
 const closeModal = () => {

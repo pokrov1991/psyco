@@ -1,7 +1,9 @@
 <template>
   <div :class="'app'">
     <pHeader/>
-    <NuxtPage />
+    <NuxtPage/>
     <pFooter/>
   </div>
 </template>
+<script setup lang="ts">
+</script>

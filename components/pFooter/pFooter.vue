@@ -13,8 +13,8 @@
           </div>
           <div class="p-footer__row-item--info">
             <div class="p-footer__row-item--content">
-              <nuxt-link :to="item.link" v-for="(item, index) in item.links" :key="index">
-                <div class="p-footer-info__item" v-html="item.text"></div>
+              <nuxt-link class="p-footer-info__item" :to="item.link" v-for="(item, index) in item.links" :key="index">
+                <div class="p-footer-info__item-text" v-html="item.text"></div>
               </nuxt-link>
             </div>
             <div class="p-footer__row-item--action">

@@ -3,8 +3,8 @@
     <img :src="item.src" :class="'p-main-banner__img'" alt="">
     <div class="p-main-banner__container">
       <p-main-banner-welcome v-if="item.type === 'welcome'"/>
-      <p-main-banner-services v-if="item.type === 'services'"/>
-      <p-main-banner-form v-if="item.type === 'form'"/>
+      <p-main-banner-services :item="item" v-if="item.type === 'services'"/>
+      <p-main-banner-form :item="item" v-if="item.type === 'form'"/>
     </div>
   </div>
 </template>
@@ -31,6 +31,6 @@ const props = withDefaults( defineProps<Props>(), {
 
 </script>
 
-<style scoped>
+<style>
 @import "pMainBanner.scss";
 </style>
