@@ -2,6 +2,6 @@
   <div :class="'app'">
     <pHeader/>
     <NuxtPage />
-    <footer>footer</footer>
+    <pFooter/>
   </div>
 </template>

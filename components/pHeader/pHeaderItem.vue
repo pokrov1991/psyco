@@ -32,7 +32,6 @@ const isLink = computed(() => {
 
 // Methods
 const clickItem = () => {
-  console.log('here')
   emit('click')
 }
 

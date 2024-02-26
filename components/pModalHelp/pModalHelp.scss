@@ -3,6 +3,30 @@
     max-width: 650px;
   }
   &-content {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -24px;
+      top: -64px;
+      height: 65px;
+      width: calc(100% + 48px);
+      z-index: 2;
+      background: #fff;
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+      content: '';
+    }
+    &::after {
+      position: absolute;
+      left: -24px;
+      top: -220px;
+      z-index: 1;
+      width: calc(100% + 48px);
+      height: 220px;
+      background-color: rgb(204,23,30);
+      clip-path: path('M0,101 C79,149 94,135 149,134 S236,189 650,96 L650,220 L0,200 Z');
+      content: '';
+    }
     padding: 30px 0 0;
     &__title {
       font-size: 24px;
