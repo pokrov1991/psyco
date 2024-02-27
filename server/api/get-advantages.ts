@@ -1,4 +1,4 @@
-import data from '../mock/get-help-items.json'
+import data from '../mock/get-advantages.json'
 
 export default defineEventHandler(() => {
     return {data}

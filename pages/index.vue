@@ -3,7 +3,6 @@
   <p-slider-news/>
   <p-main-banner :type="'services'"/>
   <p-slider-help @open-modal="openModal"/>
-  <p-main-banner :type="'form'"/>
 </template>
 <script setup lang="ts">
 import {ref} from 'vue';

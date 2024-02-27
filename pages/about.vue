@@ -1,4 +1,6 @@
 <template>
-    <h1>About</h1>
-    <nuxt-link to="/">Home</nuxt-link>
+    <div class="app-about">
+      <p-main-banner :type="'about'"/>
+      <p-advantages/>
+    </div>
 </template>

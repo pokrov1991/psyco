@@ -4,12 +4,13 @@
   background: rgb(17,22,28);
   transform: translateX(-40px);
   &__container {
-    padding: 100px 24px 40px 210px;
+    padding: 100px 170px 40px 210px;
   }
   &__row {
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    justify-content: space-between;
+    gap: 40px;
 
     &-item {
       color: #ffffff;
