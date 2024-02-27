@@ -4,8 +4,8 @@
       <div class="p-main-banner-services__wrapper">
         <div class="p-main-banner-services__row">
           <div class="p-main-banner-services__row-info">
-            <div class="p-main-banner-services__title">{{item.info.title}}</div>
-            <div class="p-main-banner-services__subtitle">{{item.info.subtitle}}</div>
+            <div class="p-main-banner-services__title" v-html="item.info.title"></div>
+            <div class="p-main-banner-services__subtitle" v-html="item.info.subtitle"></div>
             <div class="p-main-banner-services__content" v-html="item.info.content"></div>
           </div>
           <div class="p-main-banner-services__row-list">

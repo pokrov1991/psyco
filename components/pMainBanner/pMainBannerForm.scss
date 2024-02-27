@@ -1,14 +1,6 @@
 .p-main-banner {
   &__form {
     .p-main-banner {
-      &__container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-      }
       &-form {
         height: 100%;
         &__container {

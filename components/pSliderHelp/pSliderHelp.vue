@@ -11,7 +11,7 @@
           :space-between="8"
       >
         <SwiperSlide v-for="slide in helpItems" :key="slide.id">
-          <p-slider-help-item :item="slide" @open-modal="openModal"/>
+          <p-help-item :item="slide" @open-modal="openModal"/>
         </SwiperSlide>
       </Swiper>
     </div>
@@ -20,6 +20,7 @@
 </template>
 <script setup lang="ts">
 import {ref} from 'vue'
+import PHelpItem from "~/components/pSliderHelp/pHelpItem.vue";
 const {data: items} = await useFetch('/api/get-help-items')
 const helpItems = ref(items.value.data)
 const emit = defineEmits(["open-modal"]);

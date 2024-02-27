@@ -20,7 +20,7 @@
 import {ref} from 'vue';
 
 const headerInfo = ref([{text: 'г.Ярославль, Лисицына 2В', src:'https://yandex.ru/maps/-/CDu9m2Yi'}, {text: `<span>+7(901)485 44-29</span><span>Запись на консультацию</span>`, src: 'tel:+79014854429'}])
-const headerList = ref([{text: '', src:'/'},{text: 'услуги', src:'/'}, {text: 'о себе', src: '/about'},{text: 'контакты', src: '/contacts'},{text: 'Запись'}])
+const headerList = ref([{text: '', src:'/'},{text: 'услуги', src:'/services'}, {text: 'о себе', src: '/about'},{text: 'контакты', src: '/contacts'},{text: 'Запись'}])
 
 //Methods
 const openModal = () => {
@@ -28,6 +28,6 @@ const openModal = () => {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 @import "pHeader.scss";
 </style>

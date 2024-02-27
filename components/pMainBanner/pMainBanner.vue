@@ -1,34 +1,29 @@
 <template>
-  <div class="p-main-banner" :class="'p-main-banner__' + item.type">
-    <img :src="item.src" :class="'p-main-banner__img'" alt="">
+  <div class="p-main-banner" :class="'p-main-banner__' + dItem.type">
+    <img :src="dItem.src" :class="'p-main-banner__img'" alt="">
     <div class="p-main-banner__container">
-      <p-main-banner-welcome v-if="item.type === 'welcome'"/>
-      <p-main-banner-services :item="item" v-if="item.type === 'services'"/>
-      <p-main-banner-form :item="item" v-if="item.type === 'form'"/>
+      <p-main-banner-welcome :item="dItem" v-if="dItem.type === 'welcome'"/>
+      <p-main-banner-services :item="dItem" v-if="dItem.type === 'services'"/>
+      <p-main-banner-form :item="dItem" v-if="dItem.type === 'form'"/>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
+import {ref} from 'vue'
 interface Props {
-  item: {
-    src: string,
-    type: string,
-    info: object
-  }
+  type: string,
 }
 const props = withDefaults( defineProps<Props>(), {
-  item: {
-    src: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    type: 'welcome',
-    info: {
-      title: 'Спортивный психолог',
-      description: 'выаыв'
-    }
-  }
+  type: 'welcome',
 });
-
+const dItem = ref({})
+const {data: item} = await useFetch('/api/get-main-banner', {
+  query: {
+    type: props.type
+  }
+})
+dItem.value = item.value.data
 </script>
 
 <style>
