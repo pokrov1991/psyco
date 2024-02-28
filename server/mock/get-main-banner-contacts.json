@@ -1,0 +1,24 @@
+{
+  "type": "contacts",
+  "src": "https://assets.volkswagen.com/is/image/volkswagenag/VW_NGW6_Showroom_Arteon_Performance_Imagery_DrivingHandling-2?Zml0PWNyb3AlMkMxJndpZD04MDAmaGVpPTQ1MCZmbXQ9anBlZyZxbHQ9NzkmYmZjPW9mZiZiYTQz",
+  "info": {
+    "title": "<h1>Контакты</h1><span>Если вы не смогли дозвониться, мы обязательно с вами свяжемся</span>",
+    "socials": [
+      {
+        "title": "Телефон",
+        "link": "tel:+79612061213",
+        "content": "+7(961)026-12-13"
+      },
+      {
+        "title": "Адрес",
+        "link": "https://yandex.ru/maps/-/CDFEi03H",
+        "content": "г.Ярославль, Лисицина 2В"
+      },
+      {
+        "title": "Телеграм",
+        "link": "https://tl.com/kissa",
+        "content": "https://tl.com/kissa"
+      }
+    ]
+  }
+}

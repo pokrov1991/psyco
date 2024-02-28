@@ -5,6 +5,7 @@
       <p-main-banner-welcome :item="dItem" v-if="dItem.type === 'welcome'"/>
       <p-main-banner-services :item="dItem" v-if="dItem.type === 'services' || dItem.type === 'about' "/>
       <p-main-banner-form :item="dItem" v-if="dItem.type === 'form'"/>
+      <p-main-banner-contacts :item="dItem" v-if="dItem.type === 'contacts'" />
     </div>
   </div>
 </template>

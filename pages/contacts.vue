@@ -1,10 +1,12 @@
+<template>
+<div class="app-contacts">
+  <p-main-banner :type="'contacts'"/>
+  <p-map/>
+</div>
+</template>
 <script setup lang="ts">
 
 </script>
-
-<template>
-
-</template>
 
 <style scoped lang="scss">
 
