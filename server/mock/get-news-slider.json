@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "img": "https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg",
+    "title": "Удивительный соблазн заблуждения",
+    "link": "/news/1"
+  },
+  {
+    "id": 2,
+    "img": "https://i.pinimg.com/originals/4c/b6/bc/4cb6bcbb863017f2f702e5fe07becaf1.jpg",
+    "title": "Тайны призрачных посетителей и их влияние на нашу жизнь",
+    "link": "/news/2"
+  },
+  {
+    "id": 3,
+    "img": "https://img1.akspic.ru/attachments/crops/0/9/5/1/0/101590/101590-prirodnyj_landshaft-bolshoj_kanon-otkos-geologiya-estestvennaya_arka-3840x2160.jpg",
+    "title": " Тайны притязаний и мистических явлений",
+    "link": "/news/3"
+  },
+  {
+    "id": 4,
+    "img": "https://gas-kvas.com/uploads/posts/2023-02/1675425985_gas-kvas-com-p-fonovii-risunok-rabochego-stola-4k-27.jpg",
+    "title": "Тайны притягательной силы незнакомцев и их роли в нашей жизни",
+    "link": "/news/4"
+  },
+  {
+    "id": 5,
+    "img": "https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg",
+    "title": "Удивительный соблазн заблуждения",
+    "link": "/news/5"
+  },
+  {
+    "id": 6,
+    "img": "https://i.pinimg.com/originals/4c/b6/bc/4cb6bcbb863017f2f702e5fe07becaf1.jpg",
+    "title": "Тайны призрачных посетителей и их влияние на нашу жизнь",
+    "link": "/news/6"
+  },
+  {
+    "id": 7,
+    "img": "https://img1.akspic.ru/attachments/crops/0/9/5/1/0/101590/101590-prirodnyj_landshaft-bolshoj_kanon-otkos-geologiya-estestvennaya_arka-3840x2160.jpg",
+    "title": " Тайны притязаний и мистических явлений",
+    "link": "/news/7"
+  },
+  {
+    "id": 8,
+    "img": "https://gas-kvas.com/uploads/posts/2023-02/1675425985_gas-kvas-com-p-fonovii-risunok-rabochego-stola-4k-27.jpg",
+    "title": "Тайны притягательной силы незнакомцев и их роли в нашей жизни",
+    "link": "/news/8"
+  }
+]

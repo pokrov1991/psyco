@@ -30,7 +30,7 @@
 </template>
 <script setup lang="ts">
 interface Props {
-  item: {
+  item?: {
     content: string,
     links: [
       {
@@ -70,7 +70,7 @@ const props = withDefaults( defineProps<Props>(), {
       },
       {
         icon: 'instagram',
-        link: 'dfsgdfgdf'
+        link: 'https://ssassadf'
       }
     ]
   }

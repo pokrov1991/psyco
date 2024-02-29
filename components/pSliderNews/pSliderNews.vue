@@ -7,12 +7,10 @@
       </div>
       <Swiper
           :class="'p-slider-news__slider'"
-          :modules="[SwiperAutoplay, SwiperEffectCreative]"
           :slides-per-view="4.5"
           :space-between="8"
-          :loop="true"
       >
-        <SwiperSlide v-for="slide in items" :key="slide">
+        <SwiperSlide v-for="(slide,index) in news" :key="index">
           <p-slider-news-item :item="slide"/>
         </SwiperSlide>
       </Swiper>
@@ -22,37 +20,9 @@
 </template>
 <script setup lang="ts">
 import {ref} from 'vue';
-const items = ref([
-    {
-      img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-      title: 'Удивительный соблазн заблуждения',
-      link: '/news/a'
-    },
-  {
-    img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    title: 'Удивительный соблазн заблуждения',
-    link: '/news/a'
-  },{
-    img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    title: 'Удивительный соблазн заблуждения',
-    link: '/news/a'
-  },{
-    img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    title: 'Удивительный соблазн заблуждения',
-    link: '/news/a'
-  },{
-    img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    title: 'Удивительный соблазн заблуждения',
-    link: '/news/a'
-  },{
-    img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    title: 'Удивительный соблазн заблуждения',
-    link: '/news/a'
-  },{
-    img: 'https://shina26.ru/wp-content/uploads/6/8/7/687da4d9770eda7de2f097a9ce8dd690.jpeg',
-    title: 'Удивительный соблазн заблуждения',
-    link: '/news/a'
-  }])
+
+const {data: items} = await useFetch('/api/get-news-slider')
+const news = ref(items.value.data)
 </script>
 <style scoped lang="scss">
 
