@@ -8,5 +8,6 @@ export default defineNuxtConfig({
   axios: {
     baseUrl: '/'
   },
+  buildModules: ["@braid/vue-formulate/nuxt"],
   css: ['~/assets/style/global.scss'],
 })

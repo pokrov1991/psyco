@@ -8,6 +8,7 @@
           center: [ 39.853910, 57.617739],
           zoom: 16,
         },
+        behaviors: ['drag']
       }"
           width="100%"
           height="620px"

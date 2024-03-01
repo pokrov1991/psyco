@@ -16,6 +16,7 @@
       </Swiper>
     </div>
   </div>
+  <p-modal-form />
 </div>
 </template>
 <script setup lang="ts">
