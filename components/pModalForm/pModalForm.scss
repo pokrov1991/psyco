@@ -1,0 +1,25 @@
+.form {
+  &-input,
+  &-select{
+    width: 50%;
+    height: 40px;
+    input,
+    select {
+      width: 100%;
+    }
+  }
+  .date {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    .form {
+      .day, .month, .year {
+        width: calc(33% - 8px);
+      }
+      &-select {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -26,11 +26,7 @@
 import { shallowRef } from 'vue';
 import {VueYandexMaps, YandexMap, YandexMapDefaultSchemeLayer, YandexMapMarker, YandexMapDefaultFeaturesLayer} from 'vue-yandex-maps';
 import type { YMap } from '@yandex/ymaps3-types';
-import {onMounted} from "vue";
 
-onMounted(()=> {
-  console.log(VueYandexMaps.settings.value)
-})
 const map = shallowRef<null | YMap>(null);
 </script>
 
