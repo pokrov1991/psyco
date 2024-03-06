@@ -1,24 +1,160 @@
-.form {
-  &-input,
-  &-select{
-    width: 50%;
-    height: 40px;
-    input,
-    select {
-      width: 100%;
+.p-icon-arrow {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDkgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTguMjgxMzEgMS4zNDkwMUM4LjM1NDM2IDEuMjcyNjggOC40MTE0NyAxLjE4Mjg4IDguNDQ5MzggMS4wODQ3NkM4LjQ4NzI4IDAuOTg2NjMzIDguNTA1MjUgMC44ODIwOTYgOC41MDIyNCAwLjc3NzExNkM4LjQ5OTIzIDAuNjcyMTM2IDguNDc1MzEgMC41Njg3NjkgOC40MzE4NSAwLjQ3MjkxNkM4LjM4ODM4IDAuMzc3MDY0IDguMzI2MjIgMC4yOTA2MDMgOC4yNDg5MiAwLjIxODQ3MUM4LjE3MTYxIDAuMTQ2MzM5IDguMDgwNjggMC4wODk5NDc4IDcuOTgxMyAwLjA1MjUxNzNDNy44ODE5MiAwLjAxNTA4NjkgNy43NzYwNiAtMC4wMDI2NDk5MiA3LjY2OTc0IDAuMDAwMzE5ODE0QzcuNTYzNDIgMC4wMDMyODk1NSA3LjQ1ODczIDAuMDI2OTA3NSA3LjM2MTY2IDAuMDY5ODI1M0M3LjI2NDU5IDAuMTEyNzQzIDcuMTc3MDIgMC4xNzQxMiA3LjEwMzk3IDAuMjUwNDUyTDAuMjIxMzMyIDcuNDQ2MjNDMC4wNzkxOTU5IDcuNTk0NjggMCA3Ljc5MTIyIDAgNy45OTU1MUMwIDguMTk5OCAwLjA3OTE5NTkgOC4zOTYzNCAwLjIyMTMzMiA4LjU0NDc4TDcuMTAzOTcgMTUuNzQxNEM3LjE3NjU0IDE1LjgxOTQgNy4yNjQwOCAxNS44ODI0IDcuMzYxNTIgMTUuOTI2N0M3LjQ1ODk1IDE1Ljk3MSA3LjU2NDMyIDE1Ljk5NTcgNy42NzE1MyAxNS45OTk1QzcuNzc4NzMgMTYuMDAzMyA3Ljg4NTYyIDE1Ljk4NTkgNy45ODU5OSAxNS45NDg2QzguMDg2MzYgMTUuOTExMiA4LjE3ODIxIDE1Ljg1NDUgOC4yNTYyIDE1Ljc4MThDOC4zMzQyIDE1LjcwOTEgOC4zOTY3OCAxNS42MjE4IDguNDQwMzEgMTUuNTI1QzguNDgzODUgMTUuNDI4MiA4LjUwNzQ3IDE1LjMyMzggOC41MDk4MSAxNS4yMTc5QzguNTEyMTQgMTUuMTEyIDguNDkzMTUgMTUuMDA2NyA4LjQ1MzkyIDE0LjkwODFDOC40MTQ2OSAxNC44MDk1IDguMzU2MDIgMTQuNzE5NiA4LjI4MTMxIDE0LjY0MzZMMS45MjMzNyA3Ljk5NTUxTDguMjgxMzEgMS4zNDkwMVoiIGZpbGw9IiNGMjRFMUUiLz48L3N2Zz4=) no-repeat center / contain;
+}
+.p-modal-form {
+  .title {
+    h1 {
+      font-size: 37px;
+      line-height: 40px;
+      color: #000;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      color: #868686;
+      margin-bottom: 12px;
     }
   }
-  .date {
+  .form {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
-    width: 100%;
-    .form {
-      .day, .month, .year {
-        width: calc(33% - 8px);
+
+    .submit {
+      width: 100%;
+      padding: 16px;
+      text-align: center;
+      color: #fff;
+      background: rgb(204,23,30);
+      font-size: 24px;
+      line-height: 26px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgb(164, 25, 28);
       }
-      &-select {
+    }
+    label {
+      display: block;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    &-input,
+    &-select{
+      position: relative;
+      width: 100%;
+      height: 40px;
+
+      &::before {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        transform: scale(-1);
+        content: '';
+        z-index: 2;
+        @extend .p-icon-arrow;
+        width: 8px;
+        height: 16px;
+      }
+      input,
+      select {
         width: 100%;
+        background: transparent;
+        color: #000;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid #868686;
+        padding-left: 16px;
+        appearance: none;
+        transition: all 0.3s ease;
+        &::placeholder {
+          color: #868686;
+        }
+
+        &:hover {
+          background: #e0e0e0;
+
+          option {
+            background: #ffffff;
+          }
+        }
+        &:focus {
+          background: transparent;
+        }
+      }
+    }
+    &-select {
+      cursor: pointer;
+
+      option {
+        padding: 8px 16px;
+      }
+      &::before {
+        transform: rotate(270deg);
+      }
+    }
+    &-label {
+      position: relative;
+      width: calc(50% - 8px);
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      p {
+        color: red;
+        position: absolute;
+      }
+
+      &.more-info {
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          background: transparent;
+          color: #000;
+          outline: none;
+          border-radius: 4px;
+          border: 1px solid #868686;
+          padding-left: 16px;
+          padding-top: 16px;
+          &::placeholder {
+            color: #868686;
+          }
+          &:hover {
+            background: #e0e0e0;
+          }
+          &:focus {
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .date {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+
+      @media (max-width: 768px) {
+       flex-wrap: wrap;
+      }
+
+      & > div:first-child,
+      & > div:last-child,
+      & > div:nth-child(2){
+        width: calc(33% - 8px);
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }

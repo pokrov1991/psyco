@@ -17,11 +17,19 @@
 
   &__container {
     padding: 24px 0 40px 170px;
+
+    @media (max-width: 768px) {
+      padding: 24px 20px;
+    }
   }
 
   &__slider {
     margin-top: 24px;
     max-height: 250px;
+
+    .swiper-slide {
+      max-width: 280px;
+    }
   }
 
   &__title {

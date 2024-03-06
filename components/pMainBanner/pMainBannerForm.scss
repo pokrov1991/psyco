@@ -1,12 +1,20 @@
 .p-main-banner {
-  &__form {
+  &.p-main-banner__form {
+    &::after {
+      content: none;
+    }
     .p-main-banner {
       &-form {
         height: 100%;
+        width: 100%;
         &__container {
           height: 100%;
+          padding-top: 250px;
           padding-left: 170px;
-          padding-bottom: 250px;
+          padding-bottom: 100px;
+          @media (max-width: 768px) {
+            padding: 50px 24px 250px;
+          }
         }
         &__wrapper {
           height: 100%;
@@ -24,6 +32,11 @@
           font-size: 82px;
           line-height: 82px;
           font-weight: 700;
+
+          @media (max-width: 768px) {
+            font-size: 32px;
+            line-height: 36px;
+          }
         }
         &__subtitle {
           max-width: 400px;

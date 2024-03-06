@@ -7,7 +7,7 @@
       </div>
       <Swiper
           :class="'p-slider-help__slider'"
-          :slides-per-view="4.5"
+          :slides-per-view="'auto'"
           :space-between="8"
       >
         <SwiperSlide v-for="slide in helpItems" :key="slide.id">
@@ -16,7 +16,6 @@
       </Swiper>
     </div>
   </div>
-  <p-modal-form />
 </div>
 </template>
 <script setup lang="ts">

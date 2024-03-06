@@ -7,7 +7,7 @@
       </div>
       <Swiper
           :class="'p-slider-news__slider'"
-          :slides-per-view="4.5"
+          :slides-per-view="'auto'"
           :space-between="8"
       >
         <SwiperSlide v-for="(slide,index) in news" :key="index">

@@ -1,47 +1,47 @@
 <template>
-  <p-modal>
+  <p-modal :class="'form'">
     <template #title>
       <h1>Запись на консультацию</h1>
       <p>Пожалуйста заполните анкету и запишитесь на консультацию. В ближайшее время, с вами свяжутся для уточнения запроса.</p>
     </template>
     <template #body>
       <UForm :schema="schema" :state="state" class="space-y-4 form" @submit="onSubmit">
-        <UFormGroup class="form-label name" label="Имя" name="name">
-          <UInput class="form-input" size="lg" v-model="state.name" />
+        <UFormGroup required class="form-label name" label="Имя" name="name">
+          <UInput :placeholder="'Ваше имя'" class="form-input" size="lg" v-model="state.name" />
         </UFormGroup>
-
-        <UFormGroup class="form-label surname" label="Фамилия" name="surname">
-          <UInput class="form-input" size="lg" v-model="state.surname" />
+        <UFormGroup required class="form-label surname" label="Фамилия" name="surname">
+          <UInput :placeholder="'Ваша фамилия'" class="form-input" size="lg" v-model="state.surname" />
         </UFormGroup>
         <div class="date">
-          <UFormGroup сlass="form-label day" label="День" name="day">
+          <UFormGroup class="form-label day"  label="День" name="day">
             <USelect class="form-select" size="lg" v-model="state.dob.day" :options="days" />
           </UFormGroup>
+
           <UFormGroup  сlass="form-label month" label="Месяц" name="month">
             <USelect class="form-select" size="lg" v-model="state.dob.month" :options="months" />
           </UFormGroup>
+
           <UFormGroup сlass="form-label year" label="Год" name="year">
             <USelect class="form-select" size="lg" v-model="state.dob.year" :options="years" />
           </UFormGroup>
         </div>
-
         <UFormGroup class="form-label sport" label="Спорт" name="sport">
           <USelect class="form-select" size="lg" v-model="state.sport" :options="sports" />
         </UFormGroup>
         <UFormGroup class="form-label sport-rank" label="Разряд" name="sportRank">
           <USelect class="form-select" size="lg" v-model="state.sportRank" :options="sportRanks" />
         </UFormGroup>
-        <UFormGroup class="form-label phone" label="Телефон" name="phone">
-          <UInput class="form-input" size="lg" v-model="state.phone" />
+        <UFormGroup required class="form-label phone" label="Телефон" name="phone">
+          <UInput :placeholder="'+7 (___)___-__-__'" class="form-input" size="lg" v-model="state.phone" />
         </UFormGroup>
         <UFormGroup class="form-label telegram" label="Телеграм" name="telegram">
-          <UInput class="form-input" size="lg" v-model="state.telegram" />
+          <UInput :placeholder="'@'" class="form-input" size="lg" v-model="state.telegram" />
         </UFormGroup>
         <UFormGroup class="form-label more-info" label="Информация" name="information">
-          <UTextarea class="form-textarea" size="lg" v-model="state.moreInfo"/>
+          <UTextarea :placeholder="'Коротко о проблеме которая вас беспокоит'" class="form-textarea" size="lg" v-model="state.moreInfo"/>
         </UFormGroup>
-        <UButton type="submit">
-          Submit
+        <UButton :class="'submit'" type="submit">
+          Записаться »
         </UButton>
       </UForm>
     </template>
@@ -52,11 +52,11 @@ import {ref} from 'vue'
 import { object, string, type InferType } from 'yup'
 
 const schema = object({
-  name: string().min(2,'Invalid email').required('Required'),
+  name: string().min(2,'Имя должно быть больше 2 символов').required('Required'),
   surname: string()
-      .min(2, 'Must be at least 2 characters')
+      .min(2, 'Фамилия должна быть больше 2 символов')
       .required('Required'),
-  phone: string().min(11,'Must be at least 2 characters').required('Required')
+  phone: string().min(11,'Должно быть минимум из 11 цифр').required('Required')
 })
 const currentYear = (new Date()).getFullYear();
 const range = (start: number, stop:number, step :number) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
@@ -83,7 +83,7 @@ const state = reactive({
   },
   sport: sport.value,
   sportRank: sportRank.value,
-  phone: '+7',
+  phone: '',
   telegram: '',
   moreInfo: ''
 })
