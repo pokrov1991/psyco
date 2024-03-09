@@ -1,8 +1,7 @@
 <template>
   <div class="p-header-item">
     <div v-if="isLink" class="p-header-item__elem">
-      <nuxt-link :class="'p-header-item__elem-link'" :to="item.src"></nuxt-link>
-      <span :class="'p-header-item__elem-text'" v-html="item.text"></span>
+      <nuxt-link :class="'p-header-item__elem-link'" :to="item.src" v-html="item.text"></nuxt-link>
     </div>
     <div @click="clickItem" v-else class="p-header-item__elem">
       <span :class="'p-header-item__elem-text'">{{item.text}}</span>

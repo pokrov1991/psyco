@@ -1,0 +1,57 @@
+.p-main-banner {
+  .p-main-banner {
+    &-welcome {
+      width: 100%;
+      padding: 0 170px;
+      @media (max-width: 768px) {
+        padding: 0 16px;
+      }
+      &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      &__head {
+        font-size: 100px;
+        line-height: 102px;
+        max-width: 500px;
+        font-weight: 600;
+
+        @media (max-width: 768px) {
+          font-size: 44px;
+          line-height: 48px;
+        }
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 500px;
+        span {
+          &:nth-child(2) {
+            text-transform: uppercase;
+            font-size: 40px;
+            line-height: 44px;
+            max-width: 250px;
+
+            @media (max-width: 768px) {
+              font-size: 24px;
+              line-height: 28px;
+              font-weight: 600;
+            }
+          }
+          &:last-child {
+            color: rgb(208,41,50);
+          }
+          &:first-child {
+            @media (max-width: 768px){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

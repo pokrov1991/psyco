@@ -4,7 +4,7 @@
     <pSidebar/>
     <NuxtPage/>
     <p-main-banner :type="'form'"/>
-<!--    <pFooter/>-->
+    <pFooter/>
   </div>
 </template>
 <script setup lang="ts">
