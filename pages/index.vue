@@ -2,12 +2,12 @@
   <p-main-banner :type="'welcome'"/>
   <p-slider-news/>
   <p-main-banner :type="'services'"/>
-  <p-slider-help @open-modal="openModal"/>
+  <p-slider-help @open-form="openForm"/>
 </template>
 <script setup lang="ts">
-import {ref} from 'vue';
-const emit = defineEmits(["open-modal"]);
-const openModal = (item) => {
-  emit('open-modal', item)
+import {ref,defineEmits} from 'vue';
+const emit = defineEmits(["open-form"]);
+const openForm = () => {
+  emit('open-form')
 }
 </script>

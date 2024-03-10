@@ -1,7 +1,9 @@
 <template>
   <div class="p-header-item">
     <div v-if="isLink" class="p-header-item__elem">
-      <nuxt-link :class="'p-header-item__elem-link'" :to="item.src" v-html="item.text"></nuxt-link>
+      <nuxt-link :class="'p-header-item__elem-link'" :to="item.src">
+        <span :class="'p-header-item__elem-text'"  v-html="item.text"></span>
+      </nuxt-link>
     </div>
     <div @click="clickItem" v-else class="p-header-item__elem">
       <span :class="'p-header-item__elem-text'">{{item.text}}</span>
@@ -10,7 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import {computed} from 'vue';
+import {computed, withDefaults, defineEmits, defineProps} from 'vue';
+const emit = defineEmits(['open-form']);
 interface Props {
   item: {
     src?: string,
@@ -31,11 +34,11 @@ const isLink = computed(() => {
 
 // Methods
 const clickItem = () => {
-  emit('click')
+  emit('open-form')
 }
 
 // Emits
-const emit = defineEmits(['click']);
+
 </script>
 
 <style scoped>

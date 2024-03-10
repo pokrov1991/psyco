@@ -9,7 +9,7 @@
           <div class="p-main-banner-form__subtitle">
             {{item.info.subtitle}}
           </div>
-          <div class="p-main-banner-form__action">
+          <div @click="openForm" class="p-main-banner-form__action">
             Записаться
           </div>
         </div>
@@ -19,6 +19,9 @@
 </template>
 
 <script setup lang="ts">
+import {defineEmits} from 'vue'
+
+const emit = defineEmits('open-form')
 interface Props {
   item: {
     type: string,
@@ -39,6 +42,10 @@ const props = withDefaults( defineProps<Props>(), {
     }
   }
 });
+
+const openForm = () => {
+  emit('open-form')
+}
 </script>
 
 <style scoped>

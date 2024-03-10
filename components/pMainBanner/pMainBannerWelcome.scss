@@ -1,6 +1,7 @@
 .p-main-banner {
   .p-main-banner {
-    &-welcome {
+    &-welcome,
+    &-news{
       width: 100%;
       padding: 0 170px;
       @media (max-width: 768px) {
@@ -51,6 +52,15 @@
             }
           }
         }
+      }
+    }
+    &-news {
+      padding: 0 170px 200px;
+      @media (max-width: 768px) {
+        padding: 0 16px 100px;
+      }
+      &__head {
+        max-width: 1400px;
       }
     }
   }

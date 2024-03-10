@@ -1,5 +1,5 @@
 <template>
-  <p-modal :class="'form'">
+  <p-modal :class="'form'" @close="closeModal">
     <template #title>
       <h1>Запись на консультацию</h1>
       <p>Пожалуйста заполните анкету и запишитесь на консультацию. В ближайшее время, с вами свяжутся для уточнения запроса.</p>
@@ -48,8 +48,9 @@
   </p-modal>
 </template>
 <script setup lang="ts">
-import {ref} from 'vue'
+import {ref, defineEmits} from 'vue'
 import { object, string, type InferType } from 'yup'
+const emit = defineEmits(["close"]);
 
 const schema = object({
   name: string().min(2,'Имя должно быть больше 2 символов').required('Required'),
@@ -91,6 +92,9 @@ const state = reactive({
 async function onSubmit (event: object) {
   // Do something with event.data
   console.log(event.data)
+}
+function closeModal() {
+  emit("close");
 }
 </script>
 

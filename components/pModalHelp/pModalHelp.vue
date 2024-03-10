@@ -16,12 +16,14 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(["close"]);
+import {defineEmits} from 'vue'
+const emit = defineEmits(["close", 'open-form']);
 function closeModal() {
   emit("close");
 }
 
 const openModalForm = () => {
+  emit('open-form')
   closeModal()
 }
 interface Props {

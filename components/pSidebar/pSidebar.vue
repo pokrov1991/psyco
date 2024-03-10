@@ -29,14 +29,16 @@ const toggleSidebar = () => {
 const emit = defineEmits(['open-form', 'active-sidebar'])
 const sidebarList = ref([{text: 'услуги', src:'/services'}, {text: 'о себе', src: '/about'},{text: 'контакты', src: '/contacts'},{text: 'Запись'}])
 const home = () => {
-  // router.push('/')
+  navigateTo('/')
 }
-const checkLink = (item) => {
+const checkLink = (item:object) => {
   if(typeof item.src !== 'undefined') {
     // TO DO router
-    ///router.push(item.src)
+  navigateTo(item.src)
+    toggleSidebar()
   } else {
     emit('open-form')
+    toggleSidebar()
   }
 }
 </script>

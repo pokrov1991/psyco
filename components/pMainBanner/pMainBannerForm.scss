@@ -4,6 +4,11 @@
       content: none;
     }
     .p-main-banner {
+      &__container {
+        @media(max-width: 768px) {
+          margin-top: unset;
+        }
+      }
       &-form {
         height: 100%;
         width: 100%;
