@@ -23,7 +23,7 @@ import {ref,defineEmits} from 'vue'
 import PHelpItem from "~/components/pSliderHelp/pHelpItem.vue";
 const {data: items} = await useFetch('/api/get-help-items')
 const helpItems = ref(items.value.data)
-const emit = defineEmits(["open-modal"]);
+const emit = defineEmits(["open-modal", 'open-form']);
 const openModal = (item) => {
   emit('open-modal', item)
 }
