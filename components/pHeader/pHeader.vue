@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <div class="p-header">
+  <header class="p-header" :class="{'hide-header': hideHeader}">
+    <div >
       <div class="p-header__container">
         <div class="p-header__wrap">
           <div class="p-header__info">
@@ -16,14 +16,37 @@
 </template>
 
 <script setup lang="ts">
-import {ref, defineEmits} from 'vue';
+import {ref, defineEmits, onMounted} from 'vue';
 const emit = defineEmits('open-form')
 const headerInfo = ref([{text: 'г.Ярославль, Лисицына 2В', src:'https://yandex.ru/maps/-/CDu9m2Yi'}, {text: '<span>+7(901)485 44-29</span><span>Запись на консультацию</span>', src: 'tel:+79014854429'}])
 const headerList = ref([{text: 'услуги', src:'/services'}, {text: 'о себе', src: '/about'},{text: 'контакты', src: '/contacts'},{text: 'Запись'}])
+const hideHeader = ref(false)
+const startPoint = ref(0)
 const openForm = () => {
   emit('open-form')
 }
+ const scrolling = () =>{
+  const currentScroll = window.pageYOffset
+
+    if (currentScroll <= 0) {
+      hideHeader.value = false
+      return
+    }
+
+    if (currentScroll > startPoint.value && !hideHeader.value) {
+      hideHeader.value = true
+    } else if (currentScroll < startPoint.value && hideHeader.value) {
+      hideHeader.value = false
+    }
+    console.log(hideHeader.value)
+    startPoint.value = currentScroll
+}
 //Methods
+onMounted(() => {
+  console.log('here')
+ window.addEventListener('scroll', scrolling)
+})
+
 </script>
 
 <style lang="scss">

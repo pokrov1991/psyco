@@ -5,6 +5,7 @@
       <p>Пожалуйста заполните анкету и запишитесь на консультацию. В ближайшее время, с вами свяжутся для уточнения запроса.</p>
     </template>
     <template #body>
+
       <UForm :schema="schema" :state="state" class="space-y-4 form" @submit="onSubmit">
         <UFormGroup required class="form-label name" label="Имя" name="name">
           <UInput :placeholder="'Ваше имя'" class="form-input" size="lg" v-model="state.name" />
@@ -14,22 +15,29 @@
         </UFormGroup>
         <div class="date">
           <UFormGroup class="form-label day"  label="День" name="day">
-            <USelect class="form-select" size="lg" v-model="state.dob.day" :options="days" />
+            <p-select @value="setDate" :list="days"/>
+<!--            <USelect class="form-select" size="lg" v-model="state.dob.day" :options="days" />-->
           </UFormGroup>
 
           <UFormGroup  сlass="form-label month" label="Месяц" name="month">
-            <USelect class="form-select" size="lg" v-model="state.dob.month" :options="months" />
+            <p-select @value="setMonth" :list="months"/>
+<!--            <USelect class="form-select" size="lg" v-model="state.dob.month" :options="months" />-->
           </UFormGroup>
 
           <UFormGroup сlass="form-label year" label="Год" name="year">
-            <USelect class="form-select" size="lg" v-model="state.dob.year" :options="years" />
+            <p-select @value="setYear" :list="years"/>
+<!--            <USelect class="form-select" size="lg" v-model="state.dob.year" :options="years" />-->
           </UFormGroup>
         </div>
         <UFormGroup class="form-label sport" label="Спорт" name="sport">
-          <USelect class="form-select" size="lg" v-model="state.sport" :options="sports" />
+          <p-select @value="setSport" :list="sports"/>
+
+<!--          <USelect class="form-select" size="lg" v-model="state.sport" :options="sports" />-->
         </UFormGroup>
         <UFormGroup class="form-label sport-rank" label="Разряд" name="sportRank">
-          <USelect class="form-select" size="lg" v-model="state.sportRank" :options="sportRanks" />
+          <p-select @value="setSportRank" :list="sportRanks"/>
+
+<!--          <USelect class="form-select" size="lg" v-model="state.sportRank" :options="sportRanks" />-->
         </UFormGroup>
         <UFormGroup required class="form-label phone" label="Телефон" name="phone">
           <UInput :placeholder="'+7 (___)___-__-__'" class="form-input" size="lg" v-model="state.phone" />
@@ -95,6 +103,21 @@ async function onSubmit (event: object) {
 }
 function closeModal() {
   emit("close");
+}
+const setDate = (elem) => {
+  state.dob.day = elem
+}
+const setMonth = (elem) => {
+  state.dob.month = elem
+}
+const setYear = (elem) => {
+  state.dob.year = elem
+}
+const setSport = (elem) => {
+  state.sport = elem
+}
+const setSportRank = (elem) => {
+  state.sportRank = elem
 }
 </script>
 
