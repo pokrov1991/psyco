@@ -14,16 +14,19 @@ const setValue = (elem) => {
   emit('value', elem)
 }
 
-const openSelect = () => {
-  isOpened.value  = true
+const toggleSelect = () => {
+  isOpened.value  = !isOpened.value
+}
+const closeSelect = () => {
+  isOpened.value  = false
 }
 </script>
 
 <template>
-<div class="p-select">
+<div class="p-select" v-outside-click="closeSelect">
   <div class="p-select__container">
     <div class="p-select__wrapper">
-      <div class="p-select__head" @click.native="openSelect">
+      <div class="p-select__head" @click="toggleSelect">
         <p-select-item :value="selectedItem"/>
       </div>
       <div class="p-select__content" :class="{open: isOpened}">

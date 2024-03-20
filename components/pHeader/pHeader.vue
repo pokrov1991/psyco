@@ -1,14 +1,12 @@
 <template>
   <header class="p-header" :class="{'hide-header': hideHeader}">
-    <div >
-      <div class="p-header__container">
-        <div class="p-header__wrap">
-          <div class="p-header__info">
-            <p-header-item :class="'p-header__info-item'" v-for="(item, index) in headerInfo" :item="item" :key="index"/>
-          </div>
-          <div class="p-header__list">
-            <p-header-item @open-form="openForm" :class="'p-header__list-item'" v-for="(item, index) in headerList" :item="item" :key="index + 5"/>
-          </div>
+    <div class="p-header__container">
+      <div class="p-header__wrap">
+        <div class="p-header__info">
+          <p-header-item :class="'p-header__info-item'" v-for="(item, index) in headerInfo" :item="item" :key="index"/>
+        </div>
+        <div class="p-header__list">
+          <p-header-item @open-form="openForm" :class="'p-header__list-item'" v-for="(item, index) in headerList" :item="item" :key="index + 5"/>
         </div>
       </div>
     </div>
@@ -38,15 +36,15 @@ const openForm = () => {
     } else if (currentScroll < startPoint.value && hideHeader.value) {
       hideHeader.value = false
     }
-    console.log(hideHeader.value)
     startPoint.value = currentScroll
 }
 //Methods
 onMounted(() => {
-  console.log('here')
  window.addEventListener('scroll', scrolling)
 })
-
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', scrolling)
+})
 </script>
 
 <style lang="scss">
