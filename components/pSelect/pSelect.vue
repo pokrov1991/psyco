@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineEmits, defineProps, withDefaults,ref} from "vue";
+import {withDefaults,ref} from "vue";
 
 interface Props {
   list: [];

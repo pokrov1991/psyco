@@ -1,6 +1,6 @@
 <template>
   <div class="p-main-banner" :class="'p-main-banner__' + dItem.type">
-    <img :src="dItem.src" :class="'p-main-banner__img'" alt="">
+    <img :src="dItem.src" :class="'p-main-banner__img'" alt="Покровская Мария - Спортивный Психолог">
     <div class="p-main-banner__container">
       <p-main-banner-welcome :item="dItem" v-if="dItem.type === 'welcome' && api"/>
       <p-main-banner-services :item="dItem" v-if="dItem.type === 'services' || dItem.type === 'about' && api"/>
@@ -12,13 +12,13 @@
 </template>
 
 <script setup lang="ts">
-import {ref,defineEmits,defineProps,withDefaults} from 'vue'
+import {ref,withDefaults} from 'vue'
 interface Props {
   type: string,
   api?: boolean,
   item?: object,
 }
-const emit = defineEmits('open-form')
+const emit = defineEmits(['open-form'])
 const props = withDefaults( defineProps<Props>(), {
   type: 'welcome',
   api: true,

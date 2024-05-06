@@ -14,6 +14,9 @@ export default defineNuxtConfig({
       Roboto: {
         wght: [400, 500, 600, 700],
       },
+      Merriweather: {
+        wght: [400, 700, 900],
+      },
     }
   },
   css: ['~/assets/style/global.scss'],

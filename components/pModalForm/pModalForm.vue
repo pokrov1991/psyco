@@ -56,7 +56,7 @@
   </p-modal>
 </template>
 <script setup lang="ts">
-import {ref, defineEmits} from 'vue'
+import {ref} from 'vue'
 import { object, string, type InferType } from 'yup'
 const emit = defineEmits(["close"]);
 

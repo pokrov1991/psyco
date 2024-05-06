@@ -14,9 +14,9 @@
 </template>
 
 <script setup lang="ts">
-import {ref, defineEmits, onMounted} from 'vue';
-const emit = defineEmits('open-form')
-const headerInfo = ref([{text: 'г.Ярославль, Лисицына 2В', src:'https://yandex.ru/maps/-/CDu9m2Yi'}, {text: '<span>+7(901)485 44-29</span><span>Запись на консультацию</span>', src: 'tel:+79014854429'}])
+import {ref, onMounted} from 'vue';
+const emit = defineEmits(['open-form'])
+const headerInfo = ref([{text: 'г. Ярославль, Лисицина 2В', src:'https://yandex.ru/maps/-/CDu9m2Yi'}, {text: '<span>+ 7 (901) 485 44-29</span><span>Запись на консультацию</span>', src: 'tel:+79014854429'}])
 const headerList = ref([{text: 'услуги', src:'/services'}, {text: 'о себе', src: '/about'},{text: 'контакты', src: '/contacts'},{text: 'Запись'}])
 const hideHeader = ref(false)
 const startPoint = ref(0)

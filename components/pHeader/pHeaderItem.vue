@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import {computed, withDefaults, defineEmits, defineProps} from 'vue';
+import {computed, withDefaults} from 'vue';
 const emit = defineEmits(['open-form']);
 interface Props {
   item: {

@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 
-import {ref, defineProps, defineEmits, withDefaults} from "vue";
+import {ref, withDefaults} from "vue";
 
 
 const active = ref(false)

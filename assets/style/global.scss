@@ -10,7 +10,6 @@
 }
 
 body {
-  margin-top: 40px;
   background: #fff;
   overflow: hidden;
   overflow-y: scroll;
@@ -86,7 +85,7 @@ $offset: 1;
 .app {
   position: relative;
   min-height: 100vh;
-  margin-left: 40px;
+  padding: 42px 0 0 38px;
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -107,10 +106,10 @@ $offset: 1;
     position: absolute;
     height: 100%;
     width: 1px;
-    left: 40px;
+    left: 75px;
     top: 0;
     content: '';
-    background: rgba(255,255,255, 0.5);
+    background: rgba(255,255,255, 0.2);
     z-index: 10;
 
     @media (max-width: 768px) {

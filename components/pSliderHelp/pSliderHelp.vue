@@ -19,7 +19,7 @@
 </div>
 </template>
 <script setup lang="ts">
-import {ref,defineEmits} from 'vue'
+import {ref} from 'vue'
 import PHelpItem from "~/components/pSliderHelp/pHelpItem.vue";
 const {data: items} = await useFetch('/api/get-help-items')
 const helpItems = ref(items.value.data)
