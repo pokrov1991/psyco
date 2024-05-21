@@ -1,30 +1,29 @@
 <template>
   <div class="app-layout">
-    <Delimiter>
-      Покровская Мария - Спортивный психолог
-    </Delimiter>
+    <Delimiter> Покровская Мария - Спортивный психолог </Delimiter>
 
     <Logo />
 
     <Header />
 
     <div class="app-container">
-      <slot/>
+      <slot />
     </div>
 
-    <Delimiter>
-      Sports Psychology Agency Pokrovskaya M.G.
-    </Delimiter>
+    <Delimiter> Sports Psychology Agency Pokrovskaya M.G. </Delimiter>
 
     <Footer />
 
-    <FeedbackForm v-model="openFeedbackForm"/>
+    <FeedbackForm v-model="openFeedbackForm" />
+
+    <span @click="openFeedbackForm = !openFeedbackForm">open</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Header, Delimiter, Footer, Logo } from '~/layouts'
+import { ref } from "vue";
+import { Header, Delimiter, Footer, Logo } from "~/layouts";
 import { FeedbackForm } from "~/components";
 
-const openFeedbackForm = ref(false)
+const openFeedbackForm = ref(false);
 </script>
