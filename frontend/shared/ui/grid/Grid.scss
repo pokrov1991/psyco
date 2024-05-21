@@ -1,0 +1,22 @@
+/* stylelint-disable CssSyntaxError */
+.grid-container {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+.grid-col {
+  @include breakpoint-down('md') {
+    grid-column-end: inherit !important;
+  }
+}
+
+@for $count from 1 to 6 {
+  .grid-container_count-#{$count} {
+    grid-template-columns: repeat(#{$count}, 1fr);
+
+    @include breakpoint-down('md') {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

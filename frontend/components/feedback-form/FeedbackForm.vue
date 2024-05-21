@@ -9,7 +9,11 @@
       </div>
 
       <div class="feedback-form__container">
-        <div></div>
+        <GridContainer :col-count="2">
+          <GridCol :col-span="2">
+            1
+          </GridCol>
+        </GridContainer>
       </div>
       <div class="feedback-form__action">
         <Button @click="sendForm">
@@ -23,7 +27,7 @@
 
 <script setup lang="ts">
 import { defineModel, defineEmits } from 'vue';
-import { Modal, Button } from "~/shared";
+import { Modal, Button, GridContainer, GridCol } from "~/shared";
 import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
 const { model, sendForm } = useFeedbackFormController()
