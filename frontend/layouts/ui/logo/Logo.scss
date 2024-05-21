@@ -1,0 +1,18 @@
+.logo {
+  width: 66px;
+  height: 66px;
+  background-color: $red-second;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "Merriweather", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: 10px;
+  position: absolute;
+  top: 261px;
+  z-index: 3;
+}

@@ -1,0 +1,11 @@
+.top-line {
+  opacity: .5;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 283px;
+  z-index: 2;
+  background-color: $gray;
+  content: '';
+}

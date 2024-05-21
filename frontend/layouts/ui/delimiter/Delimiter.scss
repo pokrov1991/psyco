@@ -1,0 +1,16 @@
+.app-delimiter {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: $padding-top;
+  background: #FFF;
+  padding-left: 50px;
+  padding-top: 10px;
+  font-size: 10px;
+  letter-spacing: 0.046rem;
+  text-transform: uppercase;
+  color: #b6b6b6;
+  font-weight: 400;
+  z-index: 5;
+  font-family: "Roboto Condensed", sans-serif;
+}

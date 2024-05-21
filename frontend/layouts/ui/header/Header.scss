@@ -1,0 +1,65 @@
+.header {
+  position: absolute;
+  left: $padding-left;
+  width: calc(100% - $padding-left);
+  top: $padding-top;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
+  padding-right: 116px;
+
+  &__contacts {
+    align-items: flex-start;
+    margin-left: auto;
+    display: flex;
+    font-size: 22px;
+    line-height: 32px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-align: right;
+    gap: 16px;
+  }
+
+  &__menu {
+    display: flex;
+    margin-top: 128px;
+    padding-left: 72px;
+    gap: 49px;
+
+    &-item {
+      transition: .3s ease-in-out all;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Roboto", sans-serif;
+
+      &:hover {
+        opacity: .8;
+      }
+  }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    a,
+    a:visited {
+      font-size: 16px;
+      line-height: initial;
+      color: $red-second;
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+      text-align: right;
+      margin-top: 4px;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
