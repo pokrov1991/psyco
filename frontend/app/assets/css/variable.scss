@@ -1,0 +1,38 @@
+/* Colors */
+$red: #d1232a;
+$red-second: #cc171e;
+$main: #11161d;
+$gray: #5d6369;
+
+/* fonts */
+$font-family: 'Roboto', sans-serif;
+
+/* ELEMENTS */
+
+/* media */
+$media-desktop1920: 'max-width: 1919px';
+$media-desktop1440: 'max-width: 1439px';
+$media-desktop1366: 'max-width: 1365px';
+$media-desktop1280: 'max-width: 1279px';
+$media-tablet: 'max-width: 1023px';
+$media-mobile: 'max-width: 767px';
+
+/* root variable */
+:root {
+  --root-padding: 0 24px;
+  --root-wrap: 1256px;
+
+  @media screen and ($media_mobile) {
+    --root-padding: 0 12px;
+  }
+}
+
+/* wrapper */
+$wrap: var(--root-wrap);
+$wrap-padding: var(--root-padding);
+
+$padding-left: 39px;
+$padding-top: 43px;
+
+$transition3: 0.3s ease-in-out all;
+$border-radius: 12px;

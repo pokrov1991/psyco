@@ -1,0 +1,44 @@
+.p-help-list {
+  position: relative;
+  background: rgb(242,242,242);
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -64px;
+    height: 65px;
+    width: 100%;
+    background:rgb(242,242,242);
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 100%,0 100%);
+    content: '';
+  }
+  &__container {
+    padding: 20px 170px 40px;
+    width: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    gap: 8px;
+    color: #000;
+    h3 {
+      color: rgb(204,23,30);
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}

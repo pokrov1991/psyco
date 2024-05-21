@@ -1,0 +1,41 @@
+@import "pSliderNewsItem";
+.p-slider-news {
+  position: relative;
+  background: rgb(204,23,30);
+
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: -49px;
+    height: 50px;
+    width: 100%;
+    background: rgb(204,23,30);
+    clip-path: polygon(0 0, 100% 0,0 100%);
+    z-index: 2;
+    content: '';
+  }
+
+  &__container {
+    padding: 24px 0 40px 170px;
+
+    @media (max-width: 768px) {
+      padding: 24px 20px;
+    }
+  }
+
+  &__slider {
+    margin-top: 24px;
+    max-height: 250px;
+
+    .swiper-slide {
+      max-width: 280px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #fff;
+  }
+}

@@ -1,0 +1,139 @@
+.p-main-banner {
+  &__services,
+  &__about {
+    &.p-main-banner::after {
+      content: none;
+    }
+    .p-main-banner {
+      &-services {
+        height: 100%;
+        width: 100%;
+        font-weight: 600;
+        span {
+          color: rgb(208,41,50);
+        }
+        &__container {
+          height: 100%;
+          padding: 200px 170px;
+
+          @media (max-width: 1279px) {
+            padding: 200px 50px;
+          }
+          @media (max-width: 1024px) {
+            padding: 60px 16px;
+          }
+        }
+        &__wrapper {
+          height: 100%;
+        }
+        &__row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+          gap: 24px;
+          width: 100%;
+
+          @media(max-width: 1024px) {
+            flex-direction: column;
+          }
+          &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 420px;
+
+            @media (max-width: 768px) {
+              max-width: 100%;
+            }
+          }
+          &-list {
+            display: flex;
+            flex-direction: column;
+            max-height: 280px;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100%;
+            max-width: 640px;
+
+            @media (max-width: 768px) {
+              max-height: 100%;
+              flex-wrap: nowrap;
+              align-items: center;
+              gap: 16px;
+            }
+            &-item {
+              max-width: calc(50% - 12px);
+              width: 100%;
+
+              @media (max-width: 768px) {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+        &__title {
+          font-size: 16px;
+          line-height: 18px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        &__subtitle {
+          font-size: 42px;
+          line-height: 48px;
+          font-weight: 700;
+          max-width: 400px;
+
+          @media (max-width: 768px) {
+            font-size: 28px;
+            line-height: 32px;
+          }
+        }
+        &__action {
+          width: 100%;
+          max-width: 260px;
+          background: rgb(208,41,50);
+          text-align: center;
+          padding: 16px;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        &__content {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          font-style: italic;
+          font-size: 16px;
+
+          a {
+            color: rgb(208,41,50);
+          }
+        }
+      }
+    }
+  }
+  &__about {
+    .p-main-banner {
+      &-services {
+        &__subtitle {
+          font-size: 20px;
+          line-height: 22px;
+          font-weight: 600;
+          font-style: italic;
+        }
+        &__title {
+          font-size: 36px;
+          line-height: 36px;
+          font-weight: 700;
+          max-width: 400px;
+          text-transform: unset;
+        }
+        &__row-list {
+          max-height: 200px;
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

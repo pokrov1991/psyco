@@ -1,0 +1,7 @@
+.section {
+  position: relative;
+  max-width: $wrap;
+  padding: $wrap-padding;
+  margin: 0 auto;
+  z-index: 2;
+}
