@@ -1,30 +1,42 @@
 
 <template>
-  <UModal v-model="model">
-    <div class="help-view-modal">
-      <div class="help-view-modal__action">
-        <Button @click="onClickSubscribe">
+  <Modal v-model="isClose">
+    <div class="feedback-form">
+      <div class="feedback-form__title">Запись на консультацию</div>
+
+      <div class="feedback-form__description">
+        Пожалуйста заполните анкету и запишитесь на конмультацию в ближайщее время, с вами свяжуться для уточнения запроса.
+      </div>
+
+      <div class="feedback-form__container">
+        <div></div>
+      </div>
+      <div class="feedback-form__action">
+        <Button @click="sendForm">
           Записаться »
         </Button>
       </div>
     </div>
-  </UModal>
+  </Modal>
 </template>
 
 
 <script setup lang="ts">
 import { defineModel, defineEmits } from 'vue';
-import { Button } from "~/shared";
-const model = defineModel()
-const emit = defineEmits(['submit'])
+import { Modal, Button } from "~/shared";
+import { useFeedbackFormController } from "~/components/feedback-form/lib";
+
+const { model, sendForm } = useFeedbackFormController()
+const isClose = defineModel()
+const emit = defineEmits(['confirm'])
 
 function onClickClose () {
-  model.value = false
+  isClose.value = false
 }
 
-function onClickSubscribe () {
-  onClickClose()
-  emit('submit')
+async function onClickSendForm() {
+  await sendForm()
+  emit('confirm')
 }
 </script>
 

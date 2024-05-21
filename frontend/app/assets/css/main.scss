@@ -6,9 +6,9 @@
 @import "layouts";
 @import "mixins";
 @import "typography";
-@import "../../../shared/ui/index";
-@import "../../../layouts/ui/index";
-@import "../../../components/index";
+@import "../../../shared/ui/ui";
+@import "../../../layouts/ui/ui";
+@import "../../../components/components";
 
 *, *:before, *:after {
   box-sizing: border-box;
