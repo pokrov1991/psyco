@@ -9,6 +9,15 @@
   padding-top: 56px;
   padding-right: 116px;
 
+  @media screen and ($media-tablet) {
+    padding-right: 24px;
+  }
+
+  @media screen and ($media-mobile) {
+    padding-right: 18px;
+    padding-top: 21px;
+  }
+
   &__contacts {
     align-items: flex-start;
     margin-left: auto;
@@ -20,6 +29,24 @@
     font-family: "Roboto", sans-serif;
     text-align: right;
     gap: 16px;
+
+    small {
+      font-size: 22px;
+      line-height: 32px;
+      color: #ffffff;
+
+      @media screen and ($media-mobile) {
+        display: none;
+      }
+    }
+
+    @media screen and ($media-mobile) {
+      align-items: flex-end;
+      gap: 0;
+      flex-direction: column;
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 
   &__menu {
@@ -28,18 +55,57 @@
     padding-left: 72px;
     gap: 49px;
 
+    @media screen and ($media-tablet) {
+      padding-left: 115px;
+    }
+
+    @media screen and ($media-mobile) {
+      position: fixed;
+      left: 100%;
+      top: 0;
+      background-color: #FFF;
+      width: 100%;
+      justify-content: center;
+      height: 100vh;  
+      margin: 0;
+      z-index: 99;
+      transition: $transition3;
+      padding: 0;
+      gap: 12px;
+
+      &.is-active {
+        left: 0;
+        flex-direction: column;
+
+        .header__close {
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+
     &-item {
-      transition: .3s ease-in-out all;
+      transition: $transition3;
       font-size: 18px;
       text-transform: uppercase;
       color: #ffffff;
       font-weight: 700;
       font-family: "Roboto", sans-serif;
 
+      @media screen and ($media-mobile) {
+        color: #000;
+      }
+
       &:hover {
         opacity: .8;
       }
-  }
+
+      &.is-active {
+        color: $red-second;
+      }
+    }
   }
 
   &__phone {
@@ -60,6 +126,22 @@
       &:hover {
         opacity: .7;
       }
+    }
+  }
+
+  &__close {
+    display: none;
+  }
+
+  &__burger {
+    display: none;
+
+    @media screen and ($media-tablet) {
+      display: block;
+      margin-left: auto;
+      margin-top: 56px;
+      position: relative;
+      z-index: 2;
     }
   }
 }

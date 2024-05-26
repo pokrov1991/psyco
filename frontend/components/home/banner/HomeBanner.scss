@@ -1,8 +1,13 @@
 .home-banner {
   position: relative;
   width: 100%;
-  min-height: 1142px;
+  min-height: 1242px;
   padding-top: 392px;
+
+  @media screen and ($media-mobile) {
+    min-height: auto;
+    padding: 244px 0 126px;
+  }
 
   &__title {
     color: #ffffff;
@@ -12,6 +17,15 @@
     line-height: 120px;
     font-weight: 700;
     font-family: "Merriweather", sans-serif;
+
+    @media screen and ($media-tablet) {
+      font-size: 100px;
+    }
+
+    @media screen and ($media-mobile) {
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
 
   &__description {
@@ -23,6 +37,10 @@
     flex-direction: column;
     gap: 8px;
 
+    @media screen and ($media-mobile) {
+      margin-top: 62px;
+    }
+
     h4 {
       font-size: 45px;
       line-height: 50px;
@@ -30,6 +48,12 @@
       color: #ffffff;
       font-weight: 400;
       font-family: "Roboto", sans-serif;
+
+      @media screen and ($media-mobile) {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 700;
+      }
     }
 
     p {
@@ -39,6 +63,10 @@
       color: #ffffff;
       font-weight: 500;
       font-family: "Roboto", sans-serif;
+
+      @media screen and ($media-mobile) {
+        display: none;
+      }
     }
   }
 
@@ -49,6 +77,11 @@
     max-width: 512px;
     letter-spacing: .012rem;
     margin-top: 10px;
+
+
+    @media screen and ($media-mobile) {
+      margin-top: 20px;
+    }
   }
 
   &__image {

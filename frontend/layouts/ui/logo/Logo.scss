@@ -10,9 +10,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   left: 10px;
   position: absolute;
   top: 261px;
-  z-index: 3;
+  z-index: 10;
+
+  @media screen and ($media-tablet) {
+    left: 0;
+    width: 60px;
+    height: 60px;
+    top: 194px;
+  }
 }

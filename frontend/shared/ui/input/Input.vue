@@ -1,5 +1,5 @@
 <template>
-  <div class="p-input" :class="{ 'is-dark': darkTheme }">
+  <div class="p-input" :class="{ 'is-dark': props.darkTheme }">
     <div class="p-input__label" v-if="$slots.label">
       <slot name="label"></slot>
     </div>

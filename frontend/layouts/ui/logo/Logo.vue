@@ -1,11 +1,5 @@
-
-
 <template>
-  <div class="logo">
-    PM
-  </div>
+  <ULink class="logo" :to="'/'"> PM </ULink>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>

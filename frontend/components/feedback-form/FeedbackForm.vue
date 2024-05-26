@@ -1,5 +1,5 @@
 <template>
-  <Modal v-model="isClose">
+  <Modal v-model="open" @close="closeModal" class="feedback-form-component">
     <div class="feedback-form">
       <div class="feedback-form__title">Запись на консультацию</div>
 
@@ -15,9 +15,7 @@
               <template #label>Имя</template>
 
               <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
+                <Icon name="prime:angle-right" color="#d1232a" size="46" />
               </template>
             </Input>
           </GridCol>
@@ -27,9 +25,7 @@
               <template #label>Фамилия</template>
 
               <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
+                <Icon name="prime:angle-right" color="#d1232a" size="46" />
               </template>
             </Input>
           </GridCol>
@@ -37,68 +33,35 @@
 
         <GridContainer :col-count="3">
           <GridCol :col-span="1">
-            <Input v-model="model.day" placeholder="День">
+            <SelectMenu v-model="model.day" :options="days">
               <template #label>День</template>
-
-              <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
-              </template>
-            </Input>
+            </SelectMenu>
           </GridCol>
 
           <GridCol :col-span="1">
-            <Input v-model="model.month" placeholder="Месяц">
+            <SelectMenu v-model="model.month" :options="month">
               <template #label>Месяц</template>
-
-              <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
-              </template>
-            </Input>
+            </SelectMenu>
           </GridCol>
 
           <GridCol :col-span="1">
-            <Input v-model="model.year" placeholder="Год">
+            <SelectMenu v-model="model.year" :options="year">
               <template #label>Год</template>
-
-              <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
-              </template>
-            </Input>
+            </SelectMenu>
           </GridCol>
         </GridContainer>
 
         <GridContainer :col-count="2">
           <GridCol :col-span="1">
-            <Input
-              v-model="model.kindSport"
-              placeholder="Которым вы занимаетесь"
-            >
+            <SelectMenu v-model="model.kindSport" :options="kindSport">
               <template #label>Вид спорта</template>
-
-              <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
-              </template>
-            </Input>
+            </SelectMenu>
           </GridCol>
 
           <GridCol :col-span="1">
-            <Input v-model="model.discharge" placeholder="По этому виду спорта">
+            <SelectMenu v-model="model.discharge" :options="discharge">
               <template #label>Разряд</template>
-
-              <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
-              </template>
-            </Input>
+            </SelectMenu>
           </GridCol>
 
           <GridCol :col-span="1">
@@ -106,9 +69,7 @@
               <template #label>Телефон</template>
 
               <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
+                <Icon name="prime:angle-right" color="#d1232a" size="46" />
               </template>
             </Input>
           </GridCol>
@@ -118,23 +79,18 @@
               <template #label>Telegram</template>
 
               <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
+                <Icon name="prime:angle-right" color="#d1232a" size="46" />
               </template>
             </Input>
           </GridCol>
 
           <GridCol :col-span="2">
-            <Input v-model="model.question" placeholder="Коротко о проблеме которая вас беспокоит">
+            <PTextarea
+              v-model="model.question"
+              placeholder="Коротко о проблеме которая вас беспокоит"
+            >
               <template #label>Предварительный запрос/вопрос</template>
-
-              <template #icon>
-                <div class="footer-content__subscribe-action">
-                  <Icon name="prime:angle-right" color="#d1232a" size="46" />
-                </div>
-              </template>
-            </Input>
+            </PTextarea>
           </GridCol>
         </GridContainer>
       </div>
@@ -147,19 +103,22 @@
 
 <script setup lang="ts">
 import { defineModel, defineEmits } from "vue";
-import { Modal, Button, Input, GridContainer, GridCol } from "~/shared";
+import {
+  Modal,
+  Button,
+  Input,
+  GridContainer,
+  GridCol,
+  PTextarea,
+  SelectMenu,
+} from "~/shared";
 import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
-const { model, sendForm } = useFeedbackFormController();
-const isClose = defineModel();
-const emit = defineEmits(["confirm"]);
+const { model, open, sendForm, closeModal } = useFeedbackFormController();
 
-function onClickClose() {
-  isClose.value = false;
-}
-
-async function onClickSendForm() {
-  await sendForm();
-  emit("confirm");
-}
+const days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const month = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const year = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const kindSport = ["1", "2"];
+const discharge = ["2", "3"];
 </script>

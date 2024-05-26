@@ -24,11 +24,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #cc171e;
+      background-color: $red;
       position: absolute;
       right: 8px;
       bottom: 8px;
-      transition: .3s ease-in-out all;
+      transition: $transition3;
 
       &:hover {
         opacity: .7;

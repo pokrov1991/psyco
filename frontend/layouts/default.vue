@@ -14,9 +14,7 @@
 
     <Footer />
 
-    <FeedbackForm v-model="openFeedbackForm" />
-
-    <span @click="openFeedbackForm = !openFeedbackForm">open</span>
+    <FeedbackForm />
   </div>
 </template>
 
@@ -24,6 +22,4 @@
 import { ref } from "vue";
 import { Header, Delimiter, Footer, Logo } from "~/layouts";
 import { FeedbackForm } from "~/components";
-
-const openFeedbackForm = ref(false);
 </script>

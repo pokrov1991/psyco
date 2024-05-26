@@ -16,6 +16,10 @@
   font-family: "Roboto Condensed", sans-serif;
   transform: rotate(-90deg);
 
+  @media screen and ($media-desktop1440) {
+    display: none;
+  }
+
   &.second {
     left: -14px;
     right: initial;

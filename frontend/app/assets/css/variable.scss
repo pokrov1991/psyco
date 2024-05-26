@@ -21,17 +21,23 @@ $media-mobile: 'max-width: 767px';
 :root {
   --root-padding: 0 24px;
   --root-wrap: 1256px;
+  --root-padding-left: 39px;
+
+  @media screen and ($media-tablet) {
+    --root-padding-left: 0px;
+  }
 
   @media screen and ($media_mobile) {
-    --root-padding: 0 12px;
+    --root-padding: 0 20px;
   }
 }
+
 
 /* wrapper */
 $wrap: var(--root-wrap);
 $wrap-padding: var(--root-padding);
 
-$padding-left: 39px;
+$padding-left: var(--root-padding-left);
 $padding-top: 43px;
 
 $transition3: 0.3s ease-in-out all;

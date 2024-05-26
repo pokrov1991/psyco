@@ -28,7 +28,11 @@ body {
     width: 1px;
     height: 100%;
     left: 75px;
-    top: 0
+    top: 0;
+
+    @media screen and ($media-tablet) {
+      display: none;
+    }
   }
 }
 
