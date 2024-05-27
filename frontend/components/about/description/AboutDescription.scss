@@ -1,0 +1,42 @@
+.about-description {
+  background: #f2f2f2;
+  width: 100%;
+  font-size: 16px;
+  line-height: 25px;
+  color: #555555;
+  font-weight: 400;
+  font-family: "Merriweather", sans-serif;
+
+  &__container {
+    display: flex;
+    padding: 58px 0 89px;
+    gap: 48px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: calc(50% - 52px);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      li {
+        display: flex;
+        
+        &::before {
+          content: '';
+          background-color: $red-second;
+          min-width: 10px;
+          height: 2px;
+          display: block;
+          margin-top: 12px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.feedback-form {
+  background: #FFF;
+  min-width: 648px;
+  width: 100%;
+  padding: 48px 48px 32px;
+
+  &__title {
+    font-size: 34px;
+    line-height: initial;
+    color: #000000;
+    font-weight: 900;
+    font-family: "Merriweather", sans-serif;
+    letter-spacing: .03rem;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 25px;
+    color: #697b83;
+    font-weight: 400;
+    font-family: "Merriweather", sans-serif;
+    margin-top: 20px;
+  }
+  
+  &__action {
+    margin-top: 24px;
+  }
+
+  &__container {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .p-input {
+    &__label {
+      color: #000000;
+    }
+  }
+
+  .p-textarea {
+    &__label {
+      color: #000000;
+    }
+  }
+
+  .p-select-menu {
+    &__label {
+      color: #000000;
+    }
+  }
+}
+
+.feedback-form-component {
+  .modal__close {
+    left: calc(100% + 20px);
+  }
+}

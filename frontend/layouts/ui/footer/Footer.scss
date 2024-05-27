@@ -1,0 +1,167 @@
+.footer-banner {
+  position: relative;
+  width: 100%;
+
+  &__action {
+    max-width: 262px;
+    margin-top: 37px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 565px 0 342px;
+  }
+
+  &__description {
+    max-width: 416px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto" ,sans-serif;
+    margin-top: 37px;
+    padding-left: 8px;
+  }
+
+  &__image {
+    background-image: url("../../../app/assets/images/footer/index.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: $main;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &__title {
+    font-size: 150px;
+    color: #ffffff;
+    font-weight: 900;
+    font-family: "Merriweather", sans-serif;
+    line-height: 120px;
+  }
+}
+
+.footer-content {
+  background: $main;
+  position: relative;
+  padding-bottom: 200px;
+
+  .logo {
+    top: 11px;
+    left: 0;
+
+    @media screen and ($media-desktop1440) {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 340px;
+    width: 100%;
+
+    p {
+      font-size: 22px;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Roboto", sans-serif;
+      max-width: 340px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      a,
+      a:visited {
+        font-size: 16px;
+        color: #cc171e;
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    max-width: 398px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.022em;
+    padding-top: 32px;
+  }
+
+  &__social {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+
+
+    @media screen and ($media-tablet) {
+      margin-left: initial;
+      justify-content: flex-start;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: $red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $transition3;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__subscribe {
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-end;
+
+    &-action {
+      cursor: pointer;
+      background: #FFF;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-right: 30px;
+    gap: 32px;
+
+    @media screen and ($media-tablet) {
+      padding-right: initial;
+      flex-direction: column;
+    }
+  }
+}

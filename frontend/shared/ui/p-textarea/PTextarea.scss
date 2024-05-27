@@ -1,0 +1,49 @@
+.p-textarea {
+  position: relative;
+  width: 100%;
+
+  &.is-dark {
+    .p-input__label {
+      color: $main;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 12px;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+  }
+
+  textarea {
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #c3c3c3;
+    color: $main;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    padding: 13px 24px;
+    transition: $transition3;
+
+    &:active,
+    &:focus {
+      outline: none;
+      border-color: $main;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      color: #c3c3c3;
+      opacity: .6;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "lib/news-item/NewsItem";
+
+.home-news {
+  background: $red-second;
+  width: 100%;
+  height: 100%;
+  padding: 9px 0 144px;
+  overflow: hidden;
+
+  &__title {
+    font-size: 35px;
+    line-height: 42px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Merriweather", sans-serif;
+
+    @media screen and ($media-mobile) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__slider {
+    margin: 45px auto 0;
+
+    @media screen and ($media-mobile) {
+      margin: 24px auto 0;
+    }
+
+    &-container {
+      > div {
+        gap: 16px;
+      }
+    }
+  }
+}

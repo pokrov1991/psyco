@@ -1,0 +1,26 @@
+.p-button {
+  background-color: $red;
+  color: #FFF;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 20px;
+  cursor: pointer;
+  transition: $transition3;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Merriweather", sans-serif;
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}
