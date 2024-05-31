@@ -13,4 +13,8 @@
   font-weight: 400;
   z-index: 5;
   font-family: "Roboto Condensed", sans-serif;
+
+  @media screen and ($media-tablet) {
+    padding-left: 20px;
+  }
 }

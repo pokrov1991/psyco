@@ -11,6 +11,11 @@
     display: flex;
     padding: 58px 0 89px;
     gap: 48px;
+
+    @media screen and ($media_tablet) {
+      gap: 24px;
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -19,6 +24,10 @@
     gap: 24px;
     width: calc(50% - 52px);
 
+    @media screen and ($media_tablet) {
+      width: 100%;
+    }
+
     ul {
       display: flex;
       flex-direction: column;
@@ -26,7 +35,7 @@
 
       li {
         display: flex;
-        
+
         &::before {
           content: '';
           background-color: $red-second;

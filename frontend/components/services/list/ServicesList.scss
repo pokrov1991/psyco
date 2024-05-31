@@ -9,11 +9,19 @@
   &__item {
     max-width: calc((100% / 3) - 16px);
 
+    @media screen and ($media-desktop1280) {
+      max-width: calc((100% / 2) - 16px);
+    }
+
+    @media screen and ($media_mobile) {
+      max-width: 100%;
+    }
+
     .help-item {
       max-width: 100%;
     }
   }
-    
+
   &__container {
     width: 100%;
     display: flex;

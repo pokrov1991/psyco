@@ -4,6 +4,10 @@
   min-height: 865px;
   padding-top: 392px;
 
+  @media screen and ($media_tablet) {
+    padding-top: 192px;
+  }
+
   &__image {
     background-image: url("../../../app/assets/images/contacts/banner/index.png");
     background-size: cover;
@@ -35,7 +39,7 @@
     flex-direction: column;
     gap: 12px;
 
-    @media screen and ($media-mobile) {
+    @media screen and ($media_tablet) {
       display: none;
     }
 
@@ -55,6 +59,10 @@
     width: 100%;
     gap: 36px;
 
+    @media screen and ($media_mobile) {
+      gap: 24px;
+    }
+
     h4 {
       font-size: 35px;
       line-height: 42px;
@@ -70,6 +78,12 @@
       font-weight: 400;
       font-style: italic;
       font-family: "Merriweather", sans-serif;
+
+
+      @media screen and ($media_mobile) {
+        font-size: 16px;
+        line-height: 27px;
+      }
     }
   }
 
@@ -77,11 +91,24 @@
     display: flex;
     gap: 78px;
     padding-top: 32px;
+
+    @media screen and ($media-desktop1280) {
+      flex-direction: column;
+    }
+
+    @media screen and ($media_mobile) {
+      gap: 24px;
+    }
   }
 
   &__list {
     display: flex;
     gap: 172px;
+
+    @media screen and ($media_tablet) {
+      gap: 24px;
+      flex-direction: column;
+    }
   }
 
   &__column {

@@ -6,7 +6,7 @@
       <div class="header__phone">
         <span>+ 7 (901) 485 44-29</span>
 
-        <a href="tel:+ 7 (901) 485 44-29"> Запись на консультацию </a>
+        <p @click="feedbackFormController.openModal()"> Запись на консультацию </p>
       </div>
     </div>
 
@@ -15,18 +15,20 @@
     </div>
 
     <div class="header__menu" :class="{ 'is-active': isActive }">
-      <ULink
-        class="header__menu-item"
-        v-for="(item, index) in menuItems"
-        :to="item.link"
-        :key="index"
-        active-class="is-active"
-      >
-        {{ item.name }}
-      </ULink>
+      <div class="header__menu-container">
+        <ULink
+          class="header__menu-item"
+          v-for="(item, index) in menuItems"
+          :to="item.link"
+          :key="index"
+          active-class="is-active"
+        >
+          {{ item.name }}
+        </ULink>
 
-      <div class="header__close">
-        <Icon name="ic:round-close" color="#000" size="42" />
+        <div class="header__close" @click="isActive = false">
+          <Icon name="ic:round-close" color="#000" size="32" />
+        </div>
       </div>
     </div>
   </header>
@@ -34,6 +36,9 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useFeedbackFormController } from "~/components/feedback-form";
+
+const feedbackFormController = useFeedbackFormController();
 
 const isActive = ref(false);
 

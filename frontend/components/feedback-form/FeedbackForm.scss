@@ -4,6 +4,11 @@
   width: 100%;
   padding: 48px 48px 32px;
 
+  @media screen and ($media_mobile) {
+    min-width: auto;
+    padding: 24px;
+  }
+
   &__title {
     font-size: 34px;
     line-height: initial;
@@ -11,6 +16,11 @@
     font-weight: 900;
     font-family: "Merriweather", sans-serif;
     letter-spacing: .03rem;
+
+    @media screen and ($media_mobile) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 
   &__description {
@@ -20,8 +30,13 @@
     font-weight: 400;
     font-family: "Merriweather", sans-serif;
     margin-top: 20px;
+
+    @media screen and ($media_mobile) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
-  
+
   &__action {
     margin-top: 24px;
   }
@@ -55,5 +70,10 @@
 .feedback-form-component {
   .modal__close {
     left: calc(100% + 20px);
+
+    @media screen and ($media_mobile) {
+      left: initial;
+      right: 0;
+    }
   }
 }

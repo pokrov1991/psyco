@@ -4,14 +4,21 @@
   padding: 410px 0 248px;
   overflow: hidden;
 
+  @media screen and ($media_tablet) {
+    padding: 210px 0 148px;
+  }
+
+  @media screen and ($media_mobile) {
+  }
+
   &__container {
     display: flex;
     align-items: flex-start;
     gap: 76px;
 
-    @media screen and ($media-tablet) {
+    @media screen and ($media_tablet) {
       flex-direction: column;
-      gap: 36px;
+      gap: 24px;
     }
   }
 
@@ -34,8 +41,9 @@
     display: flex;
     padding: 16px 0 0;
 
-    @media screen and ($media-tablet) {
+    @media screen and ($media_tablet) {
       flex-direction: column;
+      gap: 24px;
     }
 
     &-column {
@@ -43,6 +51,12 @@
       flex-direction: column;
       width: 50%;
       gap: 56px;
+
+      @media screen and ($media_tablet) {
+        width: 100%;
+        max-width: 360px;
+        gap: 24px;
+      }
     }
 
     &-item {
@@ -76,6 +90,12 @@
       font-weight: 900;
       font-family: "Merriweather", sans-serif;
       margin-top: 14px;
+
+      @media screen and ($media_mobile) {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 18px;
+      }
     }
   }
 
@@ -85,6 +105,10 @@
     gap: 30px;
     margin-top: 24px;
 
+    @media screen and ($media_mobile) {
+      margin-top: 0;
+    }
+
     p {
       font-size: 20px;
       line-height: 29px;
@@ -92,6 +116,11 @@
       font-weight: 400;
       font-style: italic;
       font-family: "Merriweather", sans-serif;
+
+      @media screen and ($media_mobile) {
+        font-size: 16px;
+        line-height: 27px;
+      }
 
       a,
       a:visited {
@@ -117,7 +146,7 @@
     flex-direction: column;
     gap: 12px;
 
-    @media screen and ($media-mobile) {
+    @media screen and ($media_tablet) {
       display: none;
     }
 

@@ -25,9 +25,6 @@ $media-mobile: 'max-width: 767px';
 
   @media screen and ($media-tablet) {
     --root-padding-left: 0px;
-  }
-
-  @media screen and ($media_mobile) {
     --root-padding: 0 20px;
   }
 }
