@@ -10,6 +10,6 @@
   content: '';
 
   @media screen and ($media-tablet) {
-    top: 210px;
+    display: none;
   }
 }

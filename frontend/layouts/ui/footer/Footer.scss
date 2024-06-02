@@ -11,6 +11,14 @@
     position: relative;
     z-index: 2;
     padding: 565px 0 342px;
+
+    @media screen and ($media_tablet) {
+      padding: 365px 0 342px;
+    }
+
+    @media screen and ($media_mobile) {
+      padding: 74px 0 242px;
+    }
   }
 
   &__description {
@@ -23,6 +31,13 @@
     font-family: "Roboto" ,sans-serif;
     margin-top: 37px;
     padding-left: 8px;
+
+    @media screen and ($media_mobile) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 26px;
+      padding-left: 0;
+    }
   }
 
   &__image {
@@ -46,6 +61,11 @@
     font-weight: 900;
     font-family: "Merriweather", sans-serif;
     line-height: 120px;
+
+    @media screen and ($media_mobile) {
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
 }
 
@@ -53,6 +73,10 @@
   background: $main;
   position: relative;
   padding-bottom: 200px;
+
+  @media screen and ($media_mobile) {
+    padding-bottom: 100px;
+  }
 
   .logo {
     top: 11px;
@@ -108,19 +132,22 @@
     font-family: "Roboto", sans-serif;
     letter-spacing: -0.022em;
     padding-top: 32px;
+
+    @media screen and ($media_mobile) {
+      padding-top: 0;
+    }
   }
 
   &__social {
     margin-left: auto;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
 
-
-    @media screen and ($media-tablet) {
-      margin-left: initial;
-      justify-content: flex-start;
+    @media screen and ($media_mobile) {
+      margin: 0 auto;
+      width: 100%;
     }
 
     button {
@@ -159,9 +186,9 @@
     padding-right: 30px;
     gap: 32px;
 
-    @media screen and ($media-tablet) {
-      padding-right: initial;
-      flex-direction: column;
+    @media screen and ($media_mobile) {
+      flex-direction: column-reverse;
+      padding-right: 0;
     }
   }
 }

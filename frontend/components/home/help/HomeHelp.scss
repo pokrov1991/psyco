@@ -18,6 +18,10 @@
     color: $main;
     font-family: "Roboto", sans-serif;
 
+    @media screen and ($media_tablet) {
+      width: 100%;
+    }
+
     span {
       color: $red;
     }

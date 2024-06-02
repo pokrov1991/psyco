@@ -5,6 +5,11 @@
   padding-top: 392px;
   overflow: hidden;
 
+  @media screen and ($media_tablet) {
+    padding-top: 192px;
+    padding-bottom: 200px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -48,7 +53,7 @@
     flex-direction: column;
     gap: 12px;
 
-    @media screen and ($media-mobile) {
+    @media screen and ($media_tablet) {
       display: none;
     }
 
@@ -68,6 +73,10 @@
     flex-direction: column;
     gap: 33px;
 
+    @media screen and ($media_tablet) {
+      gap: 24px;
+    }
+
     h4 {
       font-size: 35px;
       line-height: 42px;
@@ -82,7 +91,12 @@
       color: #ffffff;
       font-weight: 400;
       font-style: italic;
-      font-family: "Merriweather";
+      font-family: "Merriweather", sans-serif;
+
+      @media screen and ($media_tablet) {
+        font-size: 16px;
+        line-height: 27px;
+      }
     }
   }
 
@@ -90,18 +104,27 @@
     display: flex;
     padding-top: 32px;
     gap: 78px;
+
+    @media screen and ($media_tablet) {
+      gap: 24px;
+      flex-direction: column;
+    }
   }
 
   &__list {
-    gap: 10px;  
+    gap: 10px;
     display: flex;
+
+    @media screen and ($media-desktop1280) {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 
   &__column {
     display: flex;
     flex-direction: column;
     max-width: 340px;
-    height: 433px;
     font-size: 16px;
     line-height: 28px;
     color: #ffffff;

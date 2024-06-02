@@ -7,11 +7,20 @@
   background-color: #ffffff;
   border: 1px solid #f4f4f4;
 
+  @media screen and ($media_mobile) {
+    max-width: 280px;
+  }
+
   &__content {
     padding: 22px 36px 19px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media screen and ($media_tablet) {
+      padding: 16px 18px 18px;
+      gap: 12px;
+    }
 
     h3 {
       font-size: 24px;
@@ -19,6 +28,11 @@
       color: #000000;
       font-weight: 900;
       font-family: "Merriweather", sans-serif;
+
+      @media screen and ($media_tablet) {
+        font-size: 18px;
+        line-height: 30px;
+      }
     }
 
     p {
@@ -27,6 +41,11 @@
       color: #697b83;
       font-weight: 400;
       font-family: "Merriweather", sans-serif;
+
+      @media screen and ($media_tablet) {
+        font-size: 14px;
+        line-height: 22px;
+      }
     }
   }
 
