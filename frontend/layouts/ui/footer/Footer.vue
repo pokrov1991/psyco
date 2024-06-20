@@ -33,7 +33,7 @@
         </div>
       </Section>
 
-      <Wave color="#11161d" />
+      <Wave color="#11161d" :variant="2" />
     </div>
 
     <div class="footer-content">
@@ -59,8 +59,8 @@
 
           <div class="footer-content__contacts">
             <p>
-              г. Ярославль, Лисицина 2В
-              <a href="tel:+ 7 (901) 485 44-29"> Смотреть на карте </a>
+              г. Ярославль, ул. Володарского, 3
+              <a href="https://maps.app.goo.gl/2jKgUgQb5H39Yajx7" target="_blank"> Смотреть на карте </a>
             </p>
 
             <p>

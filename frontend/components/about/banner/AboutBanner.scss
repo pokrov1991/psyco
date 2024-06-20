@@ -4,6 +4,7 @@
   min-height: 865px;
   padding-top: 392px;
   overflow: hidden;
+  z-index: 1;
 
   @media screen and ($media_tablet) {
     padding-top: 192px;

@@ -3,7 +3,7 @@
     <Section>
       <h2 class="home-help__title"><span>Помощь</span> / в решени вопросов</h2>
 
-      <div class="home-help__slider">
+      <div class="home-help__slider" ref="slider">
         <UCarousel
           v-slot="{ item }"
           :items="items"
@@ -12,51 +12,41 @@
           <HelpItem :item="item" @more="onMore" />
         </UCarousel>
 
-        <HelpView v-model="helpViewOpen" @subscribe="onSubscribe" />
+        <HelpView 
+          v-model="helpViewOpen" 
+          :id="helpViewId"
+          :title="helpViewTitle"
+          :desc="helpViewDesc"
+          @subscribe="onSubscribe" 
+        />
       </div>
     </Section>
   </div>
 </template>
 
 <script setup lang="ts">
-import image from "../../../app/assets/images/home/help/index.png";
+import { ref } from 'vue'
+import { useSliderSize } from '~/app/assets/utils'
 import { Section } from "~/shared";
-import { useFeedbackFormController } from "~/components/feedback-form";
 import { HelpItem, HelpView } from "./lib";
+import { useFeedbackFormController } from "~/components/feedback-form";
+import { helpItems as items } from "~/api";
 
-const feedbackFormController = useFeedbackFormController();
-
-const items = [
-  {
-    id: 1,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-  {
-    id: 2,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-  {
-    id: 3,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-  {
-    id: 4,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-];
+const slider = ref<HTMLDivElement | null>(null)
+const { sliderWidth } = useSliderSize({ containerRef: slider })
 
 const helpViewOpen = ref(false);
+const helpViewId = ref(1);
+const helpViewTitle = ref('');
+const helpViewDesc = ref('');
+const feedbackFormController = useFeedbackFormController();
 
-function onMore() {
+function onMore(item: { id: number; title: string; desc: string; }) {
+  const { id, title, desc } = item
   helpViewOpen.value = true;
+  helpViewId.value = id;
+  helpViewTitle.value = title;
+  helpViewDesc.value = desc;
 }
 
 function onSubscribe() {

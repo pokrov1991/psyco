@@ -14,7 +14,13 @@
           <HelpItem :item="item" @more="onMore" />
         </div>
 
-        <HelpView v-model="helpViewOpen" @subscribe="onSubscribe" />
+        <HelpView 
+          v-model="helpViewOpen"
+          :id="helpViewId"
+          :title="helpViewTitle"
+          :desc="helpViewDesc"
+          @subscribe="onSubscribe"
+        />
       </div>
     </Section>
   </div>
@@ -22,43 +28,23 @@
 
 <script setup lang="ts">
 import { Section } from "~/shared";
-import image from "../../../app/assets/images/home/help/index.png";
 import { useFeedbackFormController } from "~/components/feedback-form";
 import { HelpItem, HelpView } from "~/components/home/help/lib";
+import { helpItems as items } from "~/api";
 
 const feedbackFormController = useFeedbackFormController();
 
-const items = [
-  {
-    id: 1,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-  {
-    id: 2,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-  {
-    id: 3,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-  {
-    id: 4,
-    title: "Психодиагностика",
-    desc: "Проведение психодиагностики и подготовка объективной информации об особенностях личности и дополнительных «ресурсах» спортсмена.",
-    image: image,
-  },
-];
-
 const helpViewOpen = ref(false);
+const helpViewId = ref(1);
+const helpViewTitle = ref('');
+const helpViewDesc = ref('');
 
-function onMore() {
+function onMore(item: { id: number; title: string; desc: string; }) {
+  const { id, title, desc } = item
   helpViewOpen.value = true;
+  helpViewId.value = id;
+  helpViewTitle.value = title;
+  helpViewDesc.value = desc;
 }
 
 function onSubscribe() {

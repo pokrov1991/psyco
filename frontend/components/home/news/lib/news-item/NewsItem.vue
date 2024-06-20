@@ -2,7 +2,7 @@
 <template>
   <div class="news-item">
     <div class="news-item__image">
-      <img :src="props.item.image" alt="">
+      <img :src="props.item.image" :alt="props.item.title" draggable="false">
       <div class="plus" @click="onOpenNewsPage">+</div>
     </div>
 

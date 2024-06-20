@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__contacts">
-      <div class="header__address">г. Ярославль, Лисицина 2В</div>
+      <div class="header__address">г. Ярославль, ул. Володарского, 3</div>
       <small>|</small>
       <div class="header__phone">
         <span>+ 7 (901) 485 44-29</span>

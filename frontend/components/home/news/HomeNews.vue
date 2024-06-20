@@ -7,7 +7,7 @@
           Последние статьи и новости
         </h2>
 
-        <div class="home-news__slider">
+        <div class="home-news__slider" ref="slider">
           <UCarousel v-slot="{ item }" :items="items" class="home-news__slider-container">
             <NewsItem :item="item" />
           </UCarousel>
@@ -18,9 +18,11 @@
 
 
 <script setup lang="ts">
-import { Section } from "~/shared";
+import { ref } from 'vue'
+import { useSliderSize } from '~/app/assets/utils'
+import { Section } from "~/shared"
 import image from '../../../app/assets/images/home/news/index.png'
-import NewsItem from "~/components/home/news/lib/news-item/NewsItem.vue";
+import NewsItem from "~/components/home/news/lib/news-item/NewsItem.vue"
 
 const items = [
   {
@@ -53,6 +55,8 @@ const items = [
     title: 'Удивительный соблазн заблуждения',
     image: image
   },
-
 ]
+
+const slider = ref<HTMLDivElement | null>(null)
+const { sliderWidth } = useSliderSize({ containerRef: slider })
 </script>

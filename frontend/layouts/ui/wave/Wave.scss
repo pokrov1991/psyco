@@ -4,4 +4,17 @@
   bottom: -1px;
   left: 0;
   max-height: 300px;
+  z-index: 2;
+
+  svg {
+    position: relative;
+    z-index: 2;
+  }
+
+  img {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    z-index: 1;
+  }
 }

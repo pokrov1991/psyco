@@ -6,6 +6,7 @@
   height: 100%;
   padding: 9px 0 144px;
   overflow: hidden;
+  z-index: 2;
 
   @media screen and ($media_mobile) {
     padding: 9px 0 84px;

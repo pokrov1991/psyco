@@ -4,6 +4,8 @@
   <div class="services-banner">
     <div class="services-banner__image"></div>
 
+    <TopLine />
+
     <div class="services-banner__slogan">
       Услуги спортивного психолога
     </div>
@@ -64,4 +66,5 @@
 
 <script setup lang="ts">
 import { Section } from "~/shared";
+import { TopLine } from "~/layouts";
 </script>

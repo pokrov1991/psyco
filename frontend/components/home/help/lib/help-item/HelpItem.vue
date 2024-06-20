@@ -2,23 +2,21 @@
 <template>
   <div class="help-item">
     <div class="help-item__image">
-      <img :src="props.item.image" alt="">
+      <img :src="`/help/${props.item.id}.jpg`" :alt="props.item.title" draggable="false">
     </div>
 
     <div class="help-item__content">
       <h3>{{ props.item.title }}</h3>
 
-      <p>
-       {{ props.item.desc }}
-      </p>
+      <div v-html="props.item.desc"></div>
     </div>
 
-    <div class="help-item__action">
+    <div class="help-item__action" @click="onClickMore">
       <Icon name="fa:tag" color="#d1232a" size="10"/>
 
       Подробнее
 
-      <span @click="onClickMore">
+      <span>
         <Icon name="prime:angle-right" color="#fff" size="42"/>
       </span>
     </div>
@@ -28,19 +26,16 @@
 <script setup lang="ts">
 
 import { defineProps, defineEmits } from "vue"
-import { useRouter } from 'vue-router'
 const props = defineProps<{item: IItem}>()
-const router = useRouter()
 const emit = defineEmits(['more'])
 
 interface IItem {
   id: number
   title: string
   desc: string
-  image: string
 }
 
 function onClickMore() {
-  emit('more')
+  emit('more', props.item)
 }
 </script>

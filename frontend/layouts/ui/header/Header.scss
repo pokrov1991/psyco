@@ -122,7 +122,7 @@
       font-size: 16px;
       line-height: initial;
       color: $red-second;
-      font-weight: 300;
+      font-weight: 400;
       font-family: "Roboto", sans-serif;
       text-align: right;
       margin-top: 4px;
@@ -149,8 +149,8 @@
 
     @media screen and ($media_tablet) {
       display: flex;
-      position: fixed;
-      top: 200px;
+      position: absolute;
+      top: 155px;
       right: 20px;
     }
   }
