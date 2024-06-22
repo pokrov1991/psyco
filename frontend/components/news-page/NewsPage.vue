@@ -44,6 +44,8 @@
 import { Section } from "~/shared";
 import { Wave, Slogan, TopLine } from "~/layouts";
 
+const emit = defineEmits(['title'])
+
 const result = {
   title: "Удивительный соблазн заблуждения",
   date: "14 октября 2024",
@@ -60,4 +62,6 @@ const result = {
     },
   ],
 };
+
+emit('title', result.title)
 </script>

@@ -146,6 +146,7 @@
 
   &__burger {
     display: none;
+    cursor: pointer;
 
     @media screen and ($media_tablet) {
       display: flex;

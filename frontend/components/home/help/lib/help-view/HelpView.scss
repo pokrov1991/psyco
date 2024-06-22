@@ -53,6 +53,20 @@
     width: 100%;
     position: relative;
 
+    .wave {
+      @media (min-width: 767px) {
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -54px;
+          border: 50px solid transparent;
+          border-top: 5px solid #cc171e;
+          border-right: 463px solid #cc171e;
+        }
+      }
+    }
+
     svg {
       position: absolute;
       left: 0;
