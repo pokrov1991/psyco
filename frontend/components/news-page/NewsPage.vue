@@ -15,13 +15,13 @@
     </Slogan>
 
     <div class="news-page__banner">
-      <div class="news-page__image"></div>
+      <div class="news-page__image" :style="{ backgroundImage: `url(/news/${result.id}.jpg)` }"></div>
       <Section>
         <h2 class="news-page__title">{{ result.title }}</h2>
         <span class="news-page__date">{{ result.date }}</span>
       </Section>
 
-      <Wave color="#cc171e" />
+      <Wave color="#cc171e" class="wave_news" />
     </div>
 
     <div class="news-page__container">
@@ -43,11 +43,14 @@
 <script setup lang="ts">
 import { Section } from "~/shared";
 import { Wave, Slogan, TopLine } from "~/layouts";
+import { _backgroundImage } from "#tailwind-config/theme";
 
-const emit = defineEmits(['title'])
+const emit = defineEmits(['title','description'])
 
 const result = {
+  id: 1,
   title: "Удивительный соблазн заблуждения",
+  description: "Seo desc",
   date: "14 октября 2024",
   content: [
     {
@@ -64,4 +67,5 @@ const result = {
 };
 
 emit('title', result.title)
+emit('description', result.description)
 </script>

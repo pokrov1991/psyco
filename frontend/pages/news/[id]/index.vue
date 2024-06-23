@@ -1,20 +1,29 @@
 <template>
   <NuxtLayout>
-    <NewsPage @title="onTitle"/>
+    <NewsPage @title="onTitle" @description="onDescription"/>
   </NuxtLayout>
 </template>
 <script setup lang="ts">
   const title = ref('Спортивный психолог')
+  const ogTitle = ref(title)
+  const description = ref('Новость спортивной психологии')
+  const ogDescription = ref(description)
 
   const onTitle = (value: string) => {
     title.value = value
+    ogTitle.value = value
+  }
+
+  const onDescription = (value: string) => {
+    description.value = value
+    ogDescription.value = value
   }
 
   useSeoMeta({
     title,
-    ogTitle: 'Спортивный психолог - Мария Покровская',
-    description: 'Профессиональный спортивный психолог с более чем 12-летним опытом работы тренером. Обладая глубокими знаниями и навыками, помогу спортсменам различных уровней достигать максимальных результатов, справляться со стрессом, улучшать концентрацию и восстанавливать мотивацию.',
-    ogDescription: 'Профессиональный спортивный психолог с более чем 12-летним опытом работы тренером. Обладая глубокими знаниями и навыками, помогу спортсменам различных уровней достигать максимальных результатов, справляться со стрессом, улучшать концентрацию и восстанавливать мотивацию.',
+    ogTitle: ogTitle,
+    description: description,
+    ogDescription: ogDescription,
     ogImage: 'https://psysport.ru/cover.jpg',
   })
 </script>
