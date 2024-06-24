@@ -4,7 +4,7 @@ export class TFeedbackFormModel {
   day?: string = ''
   month?: string = ''
   year?: string = ''
-  kindSport?: string = ''
+  sport?: string = ''
   discharge?: string = ''
   phone?: string = ''
   telegram?: string = ''

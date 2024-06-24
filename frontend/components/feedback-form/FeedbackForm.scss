@@ -48,19 +48,29 @@
     gap: 24px;
   }
 
-  .p-input {
+  &__date-button {
+    background: #cc171e;
+    width: 100%;
+    height: 48px;
+
+    &:hover {
+      background: #990b10;
+    }
+  }
+
+  .input {
     &__label {
       color: #000000;
     }
   }
 
-  .p-textarea {
+  .textarea {
     &__label {
       color: #000000;
     }
   }
 
-  .p-select-menu {
+  .select-menu {
     &__label {
       color: #000000;
     }

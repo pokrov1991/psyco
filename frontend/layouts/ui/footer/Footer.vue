@@ -42,13 +42,10 @@
         <div class="footer-content__wrapper">
           <div class="footer-content__copyright">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Оказываю психологическую помощь юным и профессиональным спортсменам, а так же консультирую родителей.
             </p>
 
-            <p>Личное пространство (с) 2024 г. Все права защищены</p>
+            <p>Покровская Мария - Спортивный психолог. 2024 г.</p>
           </div>
 
           <div class="footer-content__social">

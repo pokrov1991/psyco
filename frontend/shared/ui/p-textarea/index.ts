@@ -1,1 +1,0 @@
-export { default as PTextarea } from './PTextarea.vue'

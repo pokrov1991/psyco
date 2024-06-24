@@ -1,12 +1,12 @@
 <template>
-  <div class="input" :class="{ 'is-dark': props.darkTheme }">
-    <div class="input__label" v-if="$slots.label">
+  <div class="textarea" :class="{ 'is-dark': props.darkTheme }">
+    <div class="textarea__label" v-if="$slots.label">
       <slot name="label"></slot>
     </div>
 
-    <UInput v-bind="$attrs" variant="none" />
+    <UTextarea v-bind="$attrs" variant="none" />
 
-    <div class="input__icon" v-if="$slots.icon">
+    <div class="textarea__icon" v-if="$slots.icon">
       <slot name="icon"></slot>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
   import { defineProps } from "vue";
-  import './Input.scss'
-  
+  import './Textarea.scss'
+
   const props = defineProps<{ darkTheme?: boolean }>();
 </script>

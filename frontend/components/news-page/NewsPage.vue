@@ -15,10 +15,10 @@
     </Slogan>
 
     <div class="news-page__banner">
-      <div class="news-page__image" :style="{ backgroundImage: `url(/news/${result.id}.jpg)` }"></div>
+      <div class="news-page__image" :style="{ backgroundImage: `url(/news/${article?.id}.jpg)` }"></div>
       <Section>
-        <h2 class="news-page__title">{{ result.title }}</h2>
-        <span class="news-page__date">{{ result.date }}</span>
+        <h2 class="news-page__title">{{ article?.title }}</h2>
+        <span class="news-page__date">{{ article?.date }}</span>
       </Section>
 
       <Wave color="#cc171e" class="wave_news" />
@@ -28,7 +28,7 @@
       <Section>
         <div
           class="news-page__text"
-          v-for="(item, index) in result.content"
+          v-for="(item, index) in article?.content"
           :key="index"
         >
           <h4>{{ item.title }}</h4>
@@ -43,29 +43,14 @@
 <script setup lang="ts">
 import { Section } from "~/shared";
 import { Wave, Slogan, TopLine } from "~/layouts";
-import { _backgroundImage } from "#tailwind-config/theme";
+import { newsItems as items } from "~/api";
 
-const emit = defineEmits(['title','description'])
+const route = useRoute()
+const article = items.find((item) => item.id === Number(route.params.id))
 
-const result = {
-  id: 1,
-  title: "Удивительный соблазн заблуждения",
-  description: "Seo desc",
-  date: "14 октября 2024",
-  content: [
-    {
-      title: "Заголовок один",
-      description:
-        "Душа и психика спортсмена испытывает колоссальные нагрузки на протяжении всей спортивной карьеры, и своевременная помощь может стать тем самым спасательным кругом, а иногда компасом на пути к вершинам. Верю, что у каждого спортсмена свой индивидуальный путь, свой темп, свои взлеты и падения. Маршрут, который требует поддержки.",
-    },
-    {
-      title: "Заголовок два",
-      description:
-        "Если вы чувствуете, что ребенок испытывает сложности в спортивной деятельности, я приглашаю вас на консультацию по спортивной психологии. Верю, что у каждого спортсмена свой индивидуальный путь, свой темп, свои взлеты и падения. Маршрут, который требует поддержки.",
-    },
-  ],
-};
+const emit = defineEmits(['title','description','image'])
 
-emit('title', result.title)
-emit('description', result.description)
+emit('title', article?.title)
+emit('description', article?.description)
+emit('image', `https://psysport.ru/news/${article?.id}.jpg`)
 </script>

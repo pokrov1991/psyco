@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.16.0",
+    "date-fns": "^2.30.0",
     "nuxt": "^3.11.2",
+    "v-calendar": "^3.1.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.9",
+    "@types/date-fns": "^2.6.0",
     "autoprefixer": "^10.4.19",
     "nuxt-icon": "^0.6.10",
     "postcss": "^8.4.38",

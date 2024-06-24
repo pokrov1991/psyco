@@ -1,9 +1,11 @@
-.p-textarea {
+@import '../../../app/assets/css/variable.scss';
+
+.textarea {
   position: relative;
   width: 100%;
 
   &.is-dark {
-    .p-input__label {
+    .input__label {
       color: $main;
     }
   }

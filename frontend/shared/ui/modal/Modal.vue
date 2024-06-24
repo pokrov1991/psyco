@@ -11,12 +11,14 @@
 </template>
 
 <script setup lang="ts">
-import { defineModel, defineEmits } from "vue";
-const emit = defineEmits(["close"]);
-const model = defineModel();
+  import { defineModel, defineEmits } from "vue";
+  import './Modal.scss'
 
-function onClickClose() {
-  model.value = false;
-  emit("close");
-}
+  const emit = defineEmits(["close"]);
+  const model = defineModel();
+
+  function onClickClose() {
+    model.value = false;
+    emit("close");
+  }
 </script>

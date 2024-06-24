@@ -1,9 +1,11 @@
-.p-select-menu {
+@import '../../../app/assets/css/variable.scss';
+
+.select-menu {
   position: relative;
   width: 100%;
 
   &.is-dark {
-    .p-input__label {
+    .input__label {
       color: $main;
     }
   }

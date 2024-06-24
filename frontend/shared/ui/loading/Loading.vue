@@ -5,10 +5,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  value: {
-    type: Boolean,
-    default: false,
-  },
-})
+  import './Loading.scss'
+
+  const props = defineProps({
+    value: {
+      type: Boolean,
+      default: false,
+    },
+  })
 </script>

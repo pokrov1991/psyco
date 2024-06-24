@@ -2,7 +2,7 @@
 <template>
   <div class="news-item">
     <div class="news-item__image">
-      <img :src="props.item.image" :alt="props.item.title" draggable="false">
+      <img :src="`/news/mini/${props.item.id}.jpg`" :alt="props.item.title" draggable="false">
       <div class="plus" @click="onOpenNewsPage">+</div>
     </div>
 
@@ -14,7 +14,6 @@
 interface IItem {
   id: number
   title: string
-  image: string
 }
 
 import { defineProps } from "vue"

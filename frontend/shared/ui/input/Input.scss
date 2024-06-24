@@ -1,9 +1,11 @@
-.p-input {
+@import '../../../app/assets/css/variable.scss';
+
+.input {
   position: relative;
   width: 100%;
 
   &.is-dark {
-    .p-input__label {
+    .input__label {
       color: $main;
     }
   }

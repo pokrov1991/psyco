@@ -1,15 +1,13 @@
-
-
 <template>
   <UButton
-      class="p-button"
-      v-bind="$attrs"
-      variant="none"
+    class="button"
+    v-bind="$attrs"
+    variant="none"
   >
     <slot></slot>
   </UButton>
 </template>
 
 <script setup lang="ts">
-
+  import './Button.scss'
 </script>
