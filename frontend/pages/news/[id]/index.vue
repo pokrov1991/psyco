@@ -8,11 +8,13 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
+  const runtimeConfig = useRuntimeConfig()
+  
   const title = ref('Спортивный психолог')
   const ogTitle = ref(title)
   const description = ref('Новость спортивной психологии')
   const ogDescription = ref(description)
-  const ogImage = ref('https://psysport.ru/cover.jpg')
+  const ogImage = ref(`${runtimeConfig.public.BASE_URL}/cover.jpg`)
 
   const onTitle = (value: string) => {
     title.value = value

@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: {enabled: true},
+    devtools: {enabled: !!process.env.IS_DEVTOOLS},
+
     css: ['~/app/assets/css/main.scss'],
 
     postcss: {
@@ -9,5 +10,14 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ["@nuxt/ui", "nuxt-icon"]
+    modules: [
+        "@nuxt/ui", 
+        "nuxt-icon"
+    ],
+
+    runtimeConfig: {
+        public: {
+          BASE_URL: process.env.BASE_URL,
+        },
+    }
 })

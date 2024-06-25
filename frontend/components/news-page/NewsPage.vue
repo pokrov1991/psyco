@@ -45,6 +45,7 @@ import { Section } from "~/shared";
 import { Wave, Slogan, TopLine } from "~/layouts";
 import { newsItems as items } from "~/api";
 
+const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const article = items.find((item) => item.id === Number(route.params.id))
 
@@ -52,5 +53,5 @@ const emit = defineEmits(['title','description','image'])
 
 emit('title', article?.title)
 emit('description', article?.description)
-emit('image', `https://psysport.ru/news/${article?.id}.jpg`)
+emit('image', `${runtimeConfig.public.BASE_URL}/news/${article?.id}.jpg`)
 </script>

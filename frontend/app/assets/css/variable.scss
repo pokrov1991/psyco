@@ -22,6 +22,7 @@ $media-mobile: 'max-width: 767px';
   --root-padding: 0 24px;
   --root-wrap: 1256px;
   --root-padding-left: 39px;
+  --color-primary-500: 209 35 42;
 
   @media screen and ($media-tablet) {
     --root-padding-left: 0px;

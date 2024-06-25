@@ -112,6 +112,7 @@ import {
 import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
 const { model, open, sendForm, closeModal } = useFeedbackFormController();
+const emit = defineEmits(['more']);
 const date = ref(new Date());
 
 const sport = ["Волейбол", "Футбол"];

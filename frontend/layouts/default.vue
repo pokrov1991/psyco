@@ -15,11 +15,12 @@
     <Footer />
 
     <FeedbackForm />
+
+    <UNotifications />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import { Header, Delimiter, Footer, Logo } from "~/layouts";
 import { FeedbackForm } from "~/components";
 </script>
