@@ -1,9 +1,7 @@
 export class TFeedbackFormModel {
   firstName?: string = ''
   lastName?: string = ''
-  day?: string = ''
-  month?: string = ''
-  year?: string = ''
+  date?: any = new Date()
   sport?: string = ''
   discharge?: string = ''
   phone?: string = ''

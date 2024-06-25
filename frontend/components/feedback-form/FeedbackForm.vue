@@ -15,10 +15,10 @@
               <UButton 
                 class="feedback-form__date-button" 
                 icon="i-heroicons-calendar-days-20-solid" 
-                :label="format(date, 'd MMMM, yyy', { locale: ru })"
+                :label="format(model.date, 'd MMMM, yyy', { locale: ru })"
               />
               <template #panel="{ close }">
-                <DatePicker v-model="date" is-required @close="close" />
+                <DatePicker v-model="model.date" is-required @close="close" />
               </template>
             </UPopover>
           </GridCol>
@@ -113,7 +113,7 @@ import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
 const { model, open, sendForm, closeModal } = useFeedbackFormController();
 const emit = defineEmits(['more']);
-const date = ref(new Date());
+model.value.date = ref(new Date());
 
 const sport = ["Волейбол", "Футбол"];
 const discharge = ["1", "2", "3"];
