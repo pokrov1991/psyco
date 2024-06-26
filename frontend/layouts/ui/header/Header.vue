@@ -35,25 +35,26 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useFeedbackFormController } from "~/components/feedback-form";
+  import './Header.scss'
+  import { ref } from "vue";
+  import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
-const feedbackFormController = useFeedbackFormController();
+  const feedbackFormController = useFeedbackFormController();
 
-const isActive = ref(false);
+  const isActive = ref(false);
 
-const menuItems = [
-  {
-    name: "Услуги",
-    link: "/services",
-  },
-  {
-    name: "О себе",
-    link: "/about",
-  },
-  {
-    name: "Контакты",
-    link: "/contacts",
-  },
-];
+  const menuItems = [
+    {
+      name: "Услуги",
+      link: "/services",
+    },
+    {
+      name: "О себе",
+      link: "/about",
+    },
+    {
+      name: "Контакты",
+      link: "/contacts",
+    },
+  ];
 </script>

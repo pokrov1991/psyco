@@ -97,24 +97,25 @@
 </template>
 
 <script setup lang="ts">
-import { format } from 'date-fns-tz';
-import ru from 'date-fns/locale/ru'
-import {
-  Modal,
-  Button,
-  Input,
-  GridContainer,
-  GridCol,
-  Textarea,
-  SelectMenu,
-  DatePicker
-} from "~/shared";
-import { useFeedbackFormController } from "~/components/feedback-form/lib";
+  import './FeedbackForm.scss'
+  import { format } from 'date-fns-tz';
+  import ru from 'date-fns/locale/ru'
+  import {
+    Modal,
+    Button,
+    Input,
+    GridContainer,
+    GridCol,
+    Textarea,
+    SelectMenu,
+    DatePicker
+  } from "~/shared";
+  import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
-const { model, open, sendForm, closeModal } = useFeedbackFormController();
-const emit = defineEmits(['more']);
-model.value.date = ref(new Date());
+  const { model, open, sendForm, closeModal } = useFeedbackFormController();
+  const emit = defineEmits(['more']);
+  model.value.date = ref(new Date());
 
-const sport = ["Волейбол", "Футбол"];
-const discharge = ["1", "2", "3"];
+  const sport = ["Волейбол", "Футбол"];
+  const discharge = ["1", "2", "3"];
 </script>

@@ -49,6 +49,7 @@
 </template>
 
 <script setup lang="ts">
+import './ContactsBanner.scss'
 import { Section } from "~/shared";
-import { Wave, Slogan, TopLine } from "~/layouts";
+import { TopLine } from "~/layouts/ui";
 </script>

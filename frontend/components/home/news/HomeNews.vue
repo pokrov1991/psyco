@@ -17,12 +17,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useSliderSize } from '~/app/assets/utils'
-import { Section } from "~/shared"
-import NewsItem from "~/components/home/news/lib/news-item/NewsItem.vue"
-import { newsItems as items } from "~/api";
+  import './HomeNews.scss'
+  import { ref } from 'vue'
+  import { useSliderSize } from '~/app/assets/utils'
+  import { Section } from "~/shared"
+  import NewsItem from "~/components/home/news/lib/news-item/NewsItem.vue"
+  import { newsItems as items } from "~/api";
 
-const slider = ref<HTMLDivElement | null>(null)
-const { sliderWidth } = useSliderSize({ containerRef: slider })
+  const slider = ref<HTMLDivElement | null>(null)
+  const { sliderWidth } = useSliderSize({ containerRef: slider })
 </script>

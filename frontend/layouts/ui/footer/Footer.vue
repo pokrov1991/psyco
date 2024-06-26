@@ -84,30 +84,31 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { Slogan, TopLine, Wave, Logo } from "~/layouts";
-import { Button, Input, Section } from "~/shared/ui";
-import { useFeedbackFormController } from "~/components/feedback-form";
+  import './Footer.scss'
+  import { ref } from "vue";
+  import { Slogan, TopLine, Wave, Logo } from "~/layouts/ui";
+  import { Button, Input, Section } from "~/shared/ui";
+  import { useFeedbackFormController } from "~/components/feedback-form/lib";
 
-const feedbackFormController = useFeedbackFormController();
+  const feedbackFormController = useFeedbackFormController();
 
-const socials = [
-  {
-    name: "facebook",
-    icon: "ri:facebook-fill",
-    href: "/facebook.com",
-  },
-  {
-    name: "twitter",
-    icon: "ri:twitter-fill",
-    href: "/twitter.com",
-  },
-  {
-    name: "instagram",
-    icon: "entypo-social:instagram",
-    href: "/instagram.com",
-  },
-];
+  const socials = [
+    {
+      name: "facebook",
+      icon: "ri:facebook-fill",
+      href: "/facebook.com",
+    },
+    {
+      name: "twitter",
+      icon: "ri:twitter-fill",
+      href: "/twitter.com",
+    },
+    {
+      name: "instagram",
+      icon: "entypo-social:instagram",
+      href: "/instagram.com",
+    },
+  ];
 
-const email = ref("");
+  const email = ref("");
 </script>

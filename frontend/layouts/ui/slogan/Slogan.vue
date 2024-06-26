@@ -9,5 +9,5 @@
 </template>
 
 <script setup lang="ts">
-
+  import './Slogan.scss'
 </script>

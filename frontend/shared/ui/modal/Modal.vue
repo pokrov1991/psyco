@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-  import { defineModel, defineEmits } from "vue";
+  import { defineModel } from "vue";
   import './Modal.scss'
 
   const emit = defineEmits(["close"]);

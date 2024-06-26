@@ -24,17 +24,18 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue"
-const props = defineProps<{item: IItem}>()
-const emit = defineEmits(['more'])
+  import './HelpItem.scss'
 
-interface IItem {
-  id: number
-  title: string
-  desc: string
-}
+  const props = defineProps<{item: IItem}>()
+  const emit = defineEmits(['more'])
 
-function onClickMore() {
-  emit('more', props.item)
-}
+  interface IItem {
+    id: number
+    title: string
+    desc: string
+  }
+
+  function onClickMore() {
+    emit('more', props.item)
+  }
 </script>

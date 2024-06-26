@@ -65,6 +65,7 @@
 
 
 <script setup lang="ts">
-import { Section } from "~/shared";
-import { TopLine } from "~/layouts";
+  import './ServicesBanner.scss'
+  import { Section } from "~/shared";
+  import { TopLine } from "~/layouts/ui";
 </script>

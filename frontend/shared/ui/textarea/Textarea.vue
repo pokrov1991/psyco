@@ -4,7 +4,7 @@
       <slot name="label"></slot>
     </div>
 
-    <UTextarea v-bind="$attrs" variant="none" />
+    <UTextarea v-bind="$attrs" />
 
     <div class="textarea__icon" v-if="$slots.icon">
       <slot name="icon"></slot>
@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-  import { defineProps } from "vue";
   import './Textarea.scss'
 
   const props = defineProps<{ darkTheme?: boolean }>();

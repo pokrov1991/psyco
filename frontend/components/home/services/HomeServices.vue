@@ -68,5 +68,6 @@
 
 
 <script setup lang="ts">
-import { Section } from "~/shared";
+  import './HomeServices.scss'
+  import { Section } from "~/shared"
 </script>

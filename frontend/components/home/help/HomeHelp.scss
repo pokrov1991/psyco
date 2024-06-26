@@ -1,4 +1,5 @@
-@import "./lib/help-item/HelpItem";
+@import '../../../app/assets/css/variable.scss';
+@import "./lib/help-item/HelpItem/";
 @import "./lib/help-view/HelpView";
 
 .home-help {

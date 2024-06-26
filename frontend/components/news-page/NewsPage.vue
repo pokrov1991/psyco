@@ -41,17 +41,18 @@
 </template>
 
 <script setup lang="ts">
-import { Section } from "~/shared";
-import { Wave, Slogan, TopLine } from "~/layouts";
-import { newsItems as items } from "~/api";
+  import './NewsPage.scss'
+  import { Section } from "~/shared";
+  import { Wave, Slogan, TopLine } from "~/layouts/ui";
+  import { newsItems as items } from "~/api";
 
-const runtimeConfig = useRuntimeConfig()
-const route = useRoute()
-const article = items.find((item) => item.id === Number(route.params.id))
+  const runtimeConfig = useRuntimeConfig()
+  const route = useRoute()
+  const article = items.find((item) => item.id === Number(route.params.id))
 
-const emit = defineEmits(['title','description','image'])
+  const emit = defineEmits(['title','description','image'])
 
-emit('title', article?.title)
-emit('description', article?.description)
-emit('image', `${runtimeConfig.public.BASE_URL}/news/${article?.id}.jpg`)
+  emit('title', article?.title)
+  emit('description', article?.description)
+  emit('image', `${runtimeConfig.public.BASE_URL}/news/${article?.id}.jpg`)
 </script>

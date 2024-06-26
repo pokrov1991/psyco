@@ -21,6 +21,5 @@
 </template>
 
 <script setup lang="ts">
-import { Header, Delimiter, Footer, Logo } from "~/layouts";
-import { FeedbackForm } from "~/components";
+  import { Header, Delimiter, Footer, Logo } from "~/layouts/ui";
 </script>

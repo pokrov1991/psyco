@@ -11,17 +11,18 @@
 </template>
 
 <script setup lang="ts">
-interface IItem {
-  id: number
-  title: string
-}
+  import './NewsItem.scss'
+  import { useRouter } from 'vue-router'
 
-import { defineProps } from "vue"
-import { useRouter } from 'vue-router'
-const props = defineProps<{item: IItem}>()
-const router = useRouter()
+  interface IItem {
+    id: number
+    title: string
+  }
 
-function onOpenNewsPage () {
-  router.push(`/news/${props.item.id}`)
-}
+  const props = defineProps<{item: IItem}>()
+  const router = useRouter()
+
+  function onOpenNewsPage () {
+    router.push(`/news/${props.item.id}`)
+  }
 </script>

@@ -55,5 +55,6 @@
 </template>
 
 <script setup lang="ts">
-import { Section } from "~/shared";
+  import './AboutDescription.scss'
+  import { Section } from "~/shared";
 </script>

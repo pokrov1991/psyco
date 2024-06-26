@@ -4,7 +4,7 @@
       <slot name="label"></slot>
     </div>
 
-    <UInput v-bind="$attrs" variant="none" />
+    <UInput v-bind="$attrs" />
 
     <div class="input__icon" v-if="$slots.icon">
       <slot name="icon"></slot>
@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-  import { defineProps } from "vue";
   import './Input.scss'
   
   const props = defineProps<{ darkTheme?: boolean }>();

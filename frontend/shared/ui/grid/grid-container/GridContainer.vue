@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, computed, provide } from 'vue'
+import { computed, provide } from 'vue'
 
 const props = defineProps<{
   /* Служит для кол-ва колонок */

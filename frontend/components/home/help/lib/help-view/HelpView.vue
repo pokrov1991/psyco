@@ -24,26 +24,27 @@
 
 
 <script setup lang="ts">
-import { defineModel, defineProps, defineEmits } from 'vue';
-import { Modal, Button } from "~/shared";
-import { Wave } from "~/layouts";
+  import './HelpView.scss'
+  import { defineModel } from 'vue';
+  import { Modal, Button } from "~/shared";
+  import { Wave } from "~/layouts/ui";
 
-const props = defineProps<{
-  id: number,
-  title: string,
-  desc: string
-}>()
+  const props = defineProps<{
+    id: number,
+    title: string,
+    desc: string
+  }>()
 
-const model = defineModel()
-const emit = defineEmits(['subscribe'])
+  const model = defineModel()
+  const emit = defineEmits(['subscribe'])
 
-function onClickClose () {
-  model.value = false
-}
+  function onClickClose () {
+    model.value = false
+  }
 
-function onClickSubscribe () {
-  onClickClose()
-  emit('subscribe')
-}
+  function onClickSubscribe () {
+    onClickClose()
+    emit('subscribe')
+  }
 </script>
 

@@ -25,31 +25,32 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useSliderSize } from '~/app/assets/utils'
-import { Section } from "~/shared";
-import { HelpItem, HelpView } from "./lib";
-import { useFeedbackFormController } from "~/components/feedback-form";
-import { helpItems as items } from "~/api";
+  import './HomeHelp.scss'
+  import { ref } from 'vue'
+  import { useSliderSize } from '~/app/assets/utils'
+  import { Section } from "~/shared";
+  import { HelpItem, HelpView } from "./lib";
+  import { useFeedbackFormController } from "~/components/feedback-form/lib";
+  import { helpItems as items } from "~/api";
 
-const slider = ref<HTMLDivElement | null>(null)
-const { sliderWidth } = useSliderSize({ containerRef: slider })
+  const slider = ref<HTMLDivElement | null>(null)
+  const { sliderWidth } = useSliderSize({ containerRef: slider })
 
-const helpViewOpen = ref(false);
-const helpViewId = ref(1);
-const helpViewTitle = ref('');
-const helpViewDesc = ref('');
-const feedbackFormController = useFeedbackFormController();
+  const helpViewOpen = ref(false);
+  const helpViewId = ref(1);
+  const helpViewTitle = ref('');
+  const helpViewDesc = ref('');
+  const feedbackFormController = useFeedbackFormController();
 
-function onMore(item: { id: number; title: string; desc: string; }) {
-  const { id, title, desc } = item
-  helpViewOpen.value = true;
-  helpViewId.value = id;
-  helpViewTitle.value = title;
-  helpViewDesc.value = desc;
-}
+  function onMore(item: { id: number; title: string; desc: string; }) {
+    const { id, title, desc } = item
+    helpViewOpen.value = true;
+    helpViewId.value = id;
+    helpViewTitle.value = title;
+    helpViewDesc.value = desc;
+  }
 
-function onSubscribe() {
-  feedbackFormController.openModal();
-}
+  function onSubscribe() {
+    feedbackFormController.openModal();
+  }
 </script>

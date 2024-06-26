@@ -2,7 +2,6 @@
   <UButton
     class="button"
     v-bind="$attrs"
-    variant="none"
   >
     <slot></slot>
   </UButton>

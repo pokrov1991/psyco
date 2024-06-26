@@ -4,12 +4,11 @@
       <slot name="label"></slot>
     </div>
 
-    <USelectMenu v-bind="$attrs" variant="none" />
+    <USelectMenu v-bind="$attrs" />
   </div>
 </template>
 
 <script setup lang="ts">
-  import { defineProps } from "vue";
   import './SelectMenu.scss'
 
   const props = defineProps<{ darkTheme?: boolean }>();

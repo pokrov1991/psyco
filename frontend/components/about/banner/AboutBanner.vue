@@ -40,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { Section } from "~/shared";
-import { Wave, TopLine } from "~/layouts";
+  import './AboutBanner.scss'
+  import { Section } from "~/shared";
+  import { TopLine } from "~/layouts/ui";
 </script>

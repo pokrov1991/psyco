@@ -1,1 +1,1 @@
-export { default as Delimiter } from './Delimiter.vue'
+export { default as Delimiter} from './Delimiter.vue'

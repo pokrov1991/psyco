@@ -27,27 +27,28 @@
 </template>
 
 <script setup lang="ts">
-import { Section } from "~/shared";
-import { useFeedbackFormController } from "~/components/feedback-form";
-import { HelpItem, HelpView } from "~/components/home/help/lib";
-import { helpItems as items } from "~/api";
+  import './ServicesList.scss'
+  import { Section } from "~/shared";
+  import { useFeedbackFormController } from "~/components/feedback-form/lib";
+  import { HelpItem, HelpView } from "~/components/home/help/lib";
+  import { helpItems as items } from "~/api";
 
-const feedbackFormController = useFeedbackFormController();
+  const feedbackFormController = useFeedbackFormController();
 
-const helpViewOpen = ref(false);
-const helpViewId = ref(1);
-const helpViewTitle = ref('');
-const helpViewDesc = ref('');
+  const helpViewOpen = ref(false);
+  const helpViewId = ref(1);
+  const helpViewTitle = ref('');
+  const helpViewDesc = ref('');
 
-function onMore(item: { id: number; title: string; desc: string; }) {
-  const { id, title, desc } = item
-  helpViewOpen.value = true;
-  helpViewId.value = id;
-  helpViewTitle.value = title;
-  helpViewDesc.value = desc;
-}
+  function onMore(item: { id: number; title: string; desc: string; }) {
+    const { id, title, desc } = item
+    helpViewOpen.value = true;
+    helpViewId.value = id;
+    helpViewTitle.value = title;
+    helpViewDesc.value = desc;
+  }
 
-function onSubscribe() {
-  feedbackFormController.openModal();
-}
+  function onSubscribe() {
+    feedbackFormController.openModal();
+  }
 </script>
